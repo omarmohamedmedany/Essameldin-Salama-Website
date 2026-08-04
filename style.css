@@ -275,6 +275,8 @@ ul {
 .about-image img {
     width: 100%;
     object-fit: contain;
+    mix-blend-mode: multiply;
+    border-radius: 50%;
 }
 
 .credentials {
@@ -754,6 +756,53 @@ ul {
 .nav-actions { display: flex; align-items: center; gap: 1.5rem; }
 .social-icon { font-size: 1.25rem; color: var(--text-main); transition: color 0.3s ease; }
 .social-icon:hover { color: #0077B5; /* LinkedIn Blue */ }
+
+
+/* Floating Trust Badge */
+.floating-trust-badge {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    background: white;
+    padding: 0.75rem 1.25rem;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    z-index: 999;
+    transition: var(--transition-smooth);
+    border: 1px solid rgba(0,0,0,0.05);
+    cursor: pointer;
+}
+
+.floating-trust-badge:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.badge-icon i {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+}
+
+.badge-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.badge-text strong {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+}
+
+.badge-text span {
+    font-size: 0.75rem;
+    color: var(--text-light);
+    font-weight: 500;
+    text-transform: uppercase;
+}
 
 /* Responsive */
 @media (max-width: 1024px) {
