@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Top" ss:WrapText="1"/>
+   <Font ss:FontName="Calibri" ss:Size="12" ss:Color="#000000"/>
+  </Style>
+  <Style ss:ID="HeaderStyle">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Font ss:FontName="Calibri" ss:Size="13" ss:Color="#FFFFFF" ss:Bold="1"/>
+   <Interior ss:Color="#2563EB" ss:Pattern="Solid"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Website Content">
+  <Table>
+   <Column ss:Width="150"/>
+   <Column ss:Width="700"/>
+   <Row ss:Height="25">
+    <Cell ss:StyleID="HeaderStyle"><Data ss:Type="String">Section</Data></Cell>
+    <Cell ss:StyleID="HeaderStyle"><Data ss:Type="String">Content</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Header (Navigation)</Data></Cell>
+    <Cell><Data ss:Type="String">- Logo: Essameldin Salama - Financial Advisor&#10;- Links: About Me, Philosophy, Expertise, Projects, FAQ, Let's Talk</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">About Me</Data></Cell>
+    <Cell><Data ss:Type="String">- Badge: Executive Profile&#10;- Title: Essameldin Salama&#10;- Subtitle: Senior Strategic Advisor | MBA, BSc | Program Manager&#10;&#10;I help organizations, leaders, and ambitious professionals solve complexity, improve performance, and achieve meaningful transformation through practical executive experience, strategic thinking, and disciplined execution.&#10;&#10;With over 34 years of multi-market experience across the Gulf and Egypt, my background includes supporting major organizations in government, infrastructure, ports, and petroleum operations—where decisions carry real operational and financial impact.&#10;&#10;I am best engaged when the challenge is serious, complexity is high, and results matter. I am also passionate about helping middle managers break career stagnation and rise toward senior executive roles.&#10;&#10;Education:&#10;- MBA (Woolf)&#10;- BSc Commerce, Accounting &amp; Economics (Alexandria University)&#10;- Early Foundation: Senior Accountant at Arthur Andersen (1990)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Statistics</Data></Cell>
+    <Cell><Data ss:Type="String">- 34+ Years Multi-Market Experience&#10;- $10B+ Mega Capital Programs Managed&#10;- Member Since 1996 - Institute of Internal Auditors</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Core Philosophy</Data></Cell>
+    <Cell><Data ss:Type="String">- Badge: Core Philosophy&#10;- Title: Why Partner With Me?&#10;- Subtitle: True transformation requires more than just financial acumen—it demands structured problem solving, stakeholder alignment, and an unwavering commitment to operational excellence.&#10;&#10;- Strategic Insight-Led: Moving beyond basic reporting to deliver data-informed insights that empower executive leadership to make critical capital and operational decisions confidently.&#10;- Governance &amp; Control: Establishing robust financial controls, Delegation of Authority (DoA) frameworks, and accountability mechanisms that protect and scale major enterprises.&#10;- Cross-Functional Leadership: Bridging the gap between finance, IT, and operations to ensure seamless ERP rollouts, process automation, and holistic business alignment.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Executive Expertise</Data></Cell>
+    <Cell><Data ss:Type="String">- Badge: Areas of Impact&#10;- Title: Executive Expertise&#10;&#10;- Finance Transformation: Led IPSAS first-time adoption, strategic planning, ERP alignment, and comprehensive process redesign for major government and private entities.&#10;- Strategic Planning &amp; Performance: Enhanced budgeting, forecasting, and project financial control disciplines across complex, multi-billion-dollar infrastructure portfolios.&#10;- Governance &amp; Decision Support: Contributed to risk management, policy development, and structured problem-solving for Board-level and Government stakeholders.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Signature Projects</Data></Cell>
+    <Cell><Data ss:Type="String">- Badge: Track Record&#10;- Title: Signature Mega-Projects&#10;&#10;Project 1: 2018-Present | Finance Transformation Program | Public Works Authority 'Ashghal' – Qatar&#10;Serving as Program Manager and Senior Strategic Advisor, acting as a catalyst for governance enhancement and performance improvement across a major public-sector organization. Supported modernization through process redesign, automation, and stronger use of Oracle ERP capabilities.&#10;&#10;Project 2: 2007-2014 | KPIZ - Khalifa Port &amp; Industrial Zone | Abu Dhabi Ports Company (ADPC)&#10;Held VP Finance role leading Project Financial Controls. Developed the offshore port (KP) and the Industrial zone Area A (KIZAD). Oversaw financial governance of capital programs exceeding multi-billion-dollar values, translating strategic vision into actionable execution plans.&#10;&#10;Project 3: 2006-2007 | Flagship Development Portfolios | Nakheel – UAE&#10;As Financial Planning &amp; Reporting Manager, delivered five-year forecasts for mega projects covering both financial and commercial dimensions. Supported Board-level and Government of Dubai reporting during a major growth and expansion phase.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Methodology</Data></Cell>
+    <Cell><Data ss:Type="String">- Badge: Methodology&#10;- Title: Our Engagement Approach - Disciplined execution from discovery to transformation.&#10;&#10;1. Strategic Discovery: We analyze the complexity of your current financial structures, governance models, and operational friction points across all entities.&#10;2. Insight-Led Strategy: I develop data-informed modernization frameworks, spanning ERP readiness, commercial costing, internal controls, and performance measurement.&#10;3. Disciplined Execution: We bridge business needs with systems solutions, acting as a catalyst for change and cultivating a culture of accountability and continuous improvement.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Testimonials</Data></Cell>
+    <Cell><Data ss:Type="String">- Badge: Social Proof&#10;- Title: Endorsed by Executives&#10;&#10;Quote 1: &quot;Essameldin brings an unparalleled depth of strategic vision and operational discipline. His work in establishing our project financial controls completely transformed our executive visibility during a high-growth phase.&quot; - Former Executive Colleague, Abu Dhabi Ports Company&#10;&#10;Quote 2: &quot;A master at bridging complex business needs with system solutions. He didn't just redesign our finance operations; he cultivated a culture of true accountability and performance.&quot; - Finance Leadership, Public Works Authority 'Ashghal'</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">FAQ</Data></Cell>
+    <Cell><Data ss:Type="String">- Badge: Clarity&#10;- Title: Frequently Asked Questions&#10;&#10;Q1: What types of organizations do you typically advise?&#10;A: I primarily work with major government entities, large-scale infrastructure and port operators, petroleum companies, and significant family-owned business groups undergoing rapid expansion or transformation in the Gulf and Egypt regions.&#10;&#10;Q2: Do you handle ERP implementation directly?&#10;A: I focus on ERP readiness and alignment. I bridge the critical gap between executive business needs and technical systems solutions (like Oracle), ensuring that the technology actually improves efficiency, control, and management insight.&#10;&#10;Q3: How do you approach finance transformation?&#10;A: Transformation must be holistic. I look at process redesign, policy development (like IPSAS adoption), strengthened internal controls, and automation simultaneously. It's about building a capable team and a stronger culture of accountability.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Contact &amp; Footer</Data></Cell>
+    <Cell><Data ss:Type="String">- Title: Ready for Meaningful Transformation?&#10;- Subtitle: Let's discuss how we can solve complexity and drive performance in your organization.&#10;&#10;- Phone: +974 66205660&#10;- Email: essamslama@hotmail.com&#10;- Location: Doha, Qatar&#10;- LinkedIn: https://www.linkedin.com/in/essameldin56/&#10;&#10;Disclaimer: This site and its contents are for informational purposes only. Past performance in mega-projects or organizational transformations does not guarantee future results. Engagement terms and advisory scope are subject to formal consultation agreements.</Data></Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+</Workbook>

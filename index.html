@@ -20,6 +20,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Calendly link widget begin -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <!-- Calendly link widget end -->
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -40,7 +46,7 @@
             </ul>
             <div class="nav-actions">
                 <a href="https://www.linkedin.com/in/essameldin56/" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="https://wa.me/97466205660" target="_blank" rel="noopener noreferrer" class="btn-primary nav-cta">Let's Talk</a>
+                <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/YOUR_LINK_HERE'});return false;" class="btn-primary nav-cta">Let's Talk</a>
                 <button class="menu-toggle" aria-label="Toggle Navigation">
                     <i class="fa-solid fa-bars"></i>
                 </button>
@@ -72,7 +78,7 @@
                 </div>
 
                 <div class="hero-buttons" style="justify-content: flex-start; margin-top: 2.5rem;">
-                    <a href="#contact" class="btn-primary hero-cta">Schedule a Strategic Consultation</a>
+                    <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/YOUR_LINK_HERE'});return false;" class="btn-primary hero-cta">Schedule a Strategic Consultation</a>
                     <a href="#projects" class="btn-secondary hero-cta" style="border-color: var(--primary-color); color: var(--primary-color);">View Signature Projects</a>
                 </div>
             </div>
@@ -171,7 +177,22 @@
                     <div class="project-content">
                         <h3>Finance Transformation Program</h3>
                         <div class="project-client">Public Works Authority 'Ashghal' – Qatar</div>
-                        <p>Serving as Program Manager and Senior Strategic Advisor, acting as a catalyst for governance enhancement and performance improvement across a major public-sector organization. Supported modernization through process redesign, automation, and stronger use of Oracle ERP capabilities.</p>
+                        <p>Serving as Program Manager and Senior Strategic Advisor, acting as a catalyst for governance enhancement and performance improvement across a major public-sector organization.</p>
+                        
+                        <div class="car-framework">
+                            <button class="car-toggle">View Case Study <i class="fa-solid fa-plus"></i></button>
+                            <div class="car-content">
+                                <div class="car-section">
+                                    <strong>Challenge:</strong> <span>The organization needed to transition to accrual-based accounting (IPSAS) and modernize financial governance across a massive public-sector portfolio while relying on fragmented legacy systems.</span>
+                                </div>
+                                <div class="car-section">
+                                    <strong>Action:</strong> <span>Led the strategic alignment between executive business needs and technical ERP capabilities. Redesigned core financial processes, enforced new internal controls, and acted as a catalyst for automation adoption.</span>
+                                </div>
+                                <div class="car-section">
+                                    <strong>Result:</strong> <span>Successfully established a culture of accountability, improved executive visibility into capital deployment, and ensured readiness for international public sector accounting standards.</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
@@ -180,7 +201,22 @@
                     <div class="project-content">
                         <h3>KPIZ - Khalifa Port & Industrial Zone</h3>
                         <div class="project-client">Abu Dhabi Ports Company (ADPC)</div>
-                        <p>Held VP Finance role leading Project Financial Controls. Developed the offshore port (KP) and the Industrial zone Area A (KIZAD). Oversaw financial governance of capital programs exceeding multi-billion-dollar values, translating strategic vision into actionable execution plans.</p>
+                        <p>Held VP Finance role leading Project Financial Controls, overseeing financial governance of capital programs exceeding multi-billion-dollar values.</p>
+                        
+                        <div class="car-framework">
+                            <button class="car-toggle">View Case Study <i class="fa-solid fa-plus"></i></button>
+                            <div class="car-content">
+                                <div class="car-section">
+                                    <strong>Challenge:</strong> <span>Managing the financial controls and cash flow forecasting for an unprecedented, multi-billion-dollar offshore port and industrial zone mega-project with high stakeholder scrutiny.</span>
+                                </div>
+                                <div class="car-section">
+                                    <strong>Action:</strong> <span>Developed and implemented rigorous project financial controls from scratch. Bridged engineering reporting with financial realities to translate the strategic vision into actionable execution plans.</span>
+                                </div>
+                                <div class="car-section">
+                                    <strong>Result:</strong> <span>Delivered high-fidelity financial visibility to the Board of Directors, ensuring the project remained financially disciplined throughout its massive growth phase.</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -189,7 +225,22 @@
                     <div class="project-content">
                         <h3>Flagship Development Portfolios</h3>
                         <div class="project-client">Nakheel – UAE</div>
-                        <p>As Financial Planning & Reporting Manager, delivered five-year forecasts for mega projects covering both financial and commercial dimensions. Supported Board-level and Government of Dubai reporting during a major growth and expansion phase.</p>
+                        <p>As Financial Planning & Reporting Manager, delivered comprehensive five-year forecasts for world-class mega projects during a historic expansion phase.</p>
+                        
+                        <div class="car-framework">
+                            <button class="car-toggle">View Case Study <i class="fa-solid fa-plus"></i></button>
+                            <div class="car-content">
+                                <div class="car-section">
+                                    <strong>Challenge:</strong> <span>The rapid scale of development required highly complex, long-term financial modeling to ensure liquidity and commercial viability across massive portfolios.</span>
+                                </div>
+                                <div class="car-section">
+                                    <strong>Action:</strong> <span>Engineered integrated five-year forecasts covering both financial and commercial dimensions. Consolidated data across multiple flagship projects for executive review.</span>
+                                </div>
+                                <div class="car-section">
+                                    <strong>Result:</strong> <span>Provided the critical data backbone needed for Board-level and Government of Dubai reporting, enabling confident, high-stakes investment decisions.</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -219,6 +270,35 @@
                     <div class="step-number">03</div>
                     <h3>Disciplined Execution</h3>
                     <p>We bridge business needs with systems solutions, acting as a catalyst for change and cultivating a culture of accountability and continuous improvement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Insights / Thought Leadership Section (NEW) -->
+    <section id="insights" class="insights section-padding">
+        <div class="container">
+            <div class="section-badge mx-auto text-center">Thought Leadership</div>
+            <h2 class="section-title reveal text-center">Executive Insights</h2>
+            
+            <div class="insights-grid">
+                <div class="insight-card reveal">
+                    <div class="insight-category">Finance Transformation</div>
+                    <h3>Navigating IPSAS Adoption: The Real Cost of Delayed Transformation</h3>
+                    <p>Transitioning to accrual accounting is more than a compliance exercise; it fundamentally shifts how public-sector capital is managed and deployed.</p>
+                    <a href="#contact" class="read-more">Request Full Brief <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="insight-card reveal delay-100">
+                    <div class="insight-category">Corporate Governance</div>
+                    <h3>Beyond the Spreadsheet: Reimagining the Role of the Modern CFO</h3>
+                    <p>In high-stakes infrastructure portfolios, financial leadership requires bridging the gap between engineering reality and commercial viability.</p>
+                    <a href="#contact" class="read-more">Request Full Brief <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="insight-card reveal delay-200">
+                    <div class="insight-category">Strategic Planning</div>
+                    <h3>The 3 Pillars of ERP Readiness for Mega-Projects</h3>
+                    <p>Why most multi-billion-dollar ERP implementations fail, and how establishing robust Delegation of Authority (DoA) frameworks prevents it.</p>
+                    <a href="#contact" class="read-more">Request Full Brief <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>

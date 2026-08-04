@@ -121,4 +121,24 @@ document.addEventListener("DOMContentLoaded", () => {
             link.innerText = `${user}@${domain}`;
         });
     });
+
+    // C.A.R. Framework Case Study Toggle
+    const carToggles = document.querySelectorAll('.car-toggle');
+    carToggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            const content = toggle.nextElementSibling;
+            const icon = toggle.querySelector('i');
+            
+            toggle.classList.toggle('active');
+            content.classList.toggle('active');
+            
+            if (toggle.classList.contains('active')) {
+                icon.classList.remove('fa-plus');
+                icon.classList.add('fa-minus');
+            } else {
+                icon.classList.remove('fa-minus');
+                icon.classList.add('fa-plus');
+            }
+        });
+    });
 });
