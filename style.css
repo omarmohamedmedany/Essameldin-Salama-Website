@@ -77,7 +77,7 @@ ul {
     background-color: var(--accent-color);
     color: white;
     padding: 1rem 2rem;
-    border-radius: 4px;
+    border-radius: 0;
     font-weight: 500;
     transition: var(--transition-smooth);
     border: none;
@@ -790,21 +790,13 @@ ul {
     }
 }
 
-.hero-cta {
-    width: 100%;
-    max-width: 320px;
-    text-align: center;
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    min-height: 75px;
-}
+
 .btn-secondary {
     display: inline-block;
     background-color: transparent;
     color: white;
     padding: 1rem 2rem;
-    border-radius: 4px;
+    border-radius: 0;
     font-weight: 500;
     transition: var(--transition-smooth);
     border: 1px solid rgba(255,255,255,0.3);
@@ -815,6 +807,25 @@ ul {
 .social-icon:hover { color: #0077B5; /* LinkedIn Blue */ }
 
 
+
+/* Card Icon Interactions */
+.icon-link {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+}
+.icon-link:hover .card-icon {
+    transform: scale(1.15);
+    background: rgba(212, 175, 55, 0.1);
+}
+.icon-link:hover .icon-hover {
+    transform: scale(1.15);
+    color: var(--primary-color);
+}
+.icon-hover {
+    transition: all 0.3s ease;
+    display: inline-block;
+}
 
 /* Responsive */
 @media (max-width: 1024px) {

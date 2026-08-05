@@ -20,7 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
                         const duration = 2000; // ms
                         const increment = target / (duration / 16); // 60fps
                         
-                        let current = 0;
+                        let current = target > 1000 ? target - 50 : 0; // Prevent slot machine effect for years
+                        
                         const updateCounter = () => {
                             current += increment;
                             if (current < target) {
@@ -107,6 +108,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 icon.classList.remove("fa-xmark");
                 icon.classList.add("fa-bars");
             });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener("click", (e) => {
+            if (navLinks.classList.contains("active") && !navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+                navLinks.classList.remove("active");
+                const icon = menuToggle.querySelector("i");
+                icon.classList.remove("fa-xmark");
+                icon.classList.add("fa-bars");
+            }
         });
     }
 
