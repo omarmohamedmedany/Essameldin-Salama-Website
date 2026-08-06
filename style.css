@@ -629,8 +629,8 @@ ul {
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     align-items: center;
-    gap: 4rem 2rem;
-    max-width: 900px;
+    gap: 3rem;
+    max-width: 600px;
     margin: 0 auto;
 }
 .logo-item {
@@ -642,12 +642,23 @@ ul {
 }
 
 .client-logo {
-    max-width: 100%;
-    width: 400px;
-    height: auto;
-    max-height: 200px;
+    width: 200px;
+    height: 200px;
     object-fit: contain;
     mix-blend-mode: multiply;
+}
+
+/* Dark Mode Support for Logos (Removes white backgrounds!) */
+@media (prefers-color-scheme: dark) {
+    .logo-banner-section {
+        background-color: #0F172A !important; /* Dark theme background */
+        border-bottom: none;
+    }
+    .client-logo {
+        /* Invert the image so white bg becomes black, then screen it so black becomes transparent */
+        filter: grayscale(100%) invert(1) brightness(1.5);
+        mix-blend-mode: screen;
+    }
 }
 
 /* Timeline Design (Replacing project-list) */
