@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="sHeader">
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="12" ss:Color="#FFFFFF" ss:Bold="1"/>
+   <Interior ss:Color="#2563EB" ss:Pattern="Solid"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Website Data">
+  <Table>
+   <Column ss:AutoFitWidth="0" ss:Width="100"/>
+   <Column ss:AutoFitWidth="0" ss:Width="250"/>
+   <Column ss:AutoFitWidth="0" ss:Width="250"/>
+   <Column ss:AutoFitWidth="0" ss:Width="400"/>
+   <Row>
+    <Cell ss:StyleID="sHeader"><Data ss:Type="String">Category</Data></Cell>
+    <Cell ss:StyleID="sHeader"><Data ss:Type="String">Title</Data></Cell>
+    <Cell ss:StyleID="sHeader"><Data ss:Type="String">Subtitle/Details</Data></Cell>
+    <Cell ss:StyleID="sHeader"><Data ss:Type="String">Description/Achievements</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Personal</Data></Cell>
+    <Cell><Data ss:Type="String">Name</Data></Cell>
+    <Cell><Data ss:Type="String">Essameldin Salama</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Personal</Data></Cell>
+    <Cell><Data ss:Type="String">Role</Data></Cell>
+    <Cell><Data ss:Type="String">Financial Advisor</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Contact</Data></Cell>
+    <Cell><Data ss:Type="String">Phone</Data></Cell>
+    <Cell><Data ss:Type="String">+974 6620 5660</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Contact</Data></Cell>
+    <Cell><Data ss:Type="String">Email</Data></Cell>
+    <Cell><Data ss:Type="String">esalama1974@gmail.com</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Contact</Data></Cell>
+    <Cell><Data ss:Type="String">Location</Data></Cell>
+    <Cell><Data ss:Type="String">Doha, Qatar</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Profile</Data></Cell>
+    <Cell><Data ss:Type="String">About Me</Data></Cell>
+    <Cell><Data ss:Type="String">Essameldin Salama is a distinguished Financial Advisor with over two decades of experience navigating complex financial landscapes. Specializing in strategic financial planning, corporate restructuring, and risk management, Essameldin has consistently delivered unparalleled growth and stability for enterprise clients across the Middle East.</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Expertise</Data></Cell>
+    <Cell><Data ss:Type="String">Skill</Data></Cell>
+    <Cell><Data ss:Type="String">Corporate Finance</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Expertise</Data></Cell>
+    <Cell><Data ss:Type="String">Skill</Data></Cell>
+    <Cell><Data ss:Type="String">Risk Management</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Expertise</Data></Cell>
+    <Cell><Data ss:Type="String">Skill</Data></Cell>
+    <Cell><Data ss:Type="String">Strategic Planning</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Expertise</Data></Cell>
+    <Cell><Data ss:Type="String">Skill</Data></Cell>
+    <Cell><Data ss:Type="String">Investment Analysis</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Experience</Data></Cell>
+    <Cell><Data ss:Type="String">Financial Manager</Data></Cell>
+    <Cell><Data ss:Type="String">Al Aali International Group (Jan 2012 - Present)</Data></Cell>
+    <Cell><Data ss:Type="String">Spearheaded a massive financial restructuring that increased overall company profitability by 25%. Implemented robust risk management protocols that protected assets during regional market volatility. Led a team of 15 financial analysts in managing a diverse portfolio of international investments.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Experience</Data></Cell>
+    <Cell><Data ss:Type="String">Senior Financial Analyst</Data></Cell>
+    <Cell><Data ss:Type="String">Qatar National Bank (QNB) (Mar 2005 - Dec 2011)</Data></Cell>
+    <Cell><Data ss:Type="String">Managed a portfolio of high-net-worth clients with assets exceeding $500M. Developed predictive financial models that improved investment return accuracy by 15%.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Experience</Data></Cell>
+    <Cell><Data ss:Type="String">Risk Assessment Officer</Data></Cell>
+    <Cell><Data ss:Type="String">Commercial Bank of Qatar (CBQ) (Jun 1999 - Feb 2005)</Data></Cell>
+    <Cell><Data ss:Type="String">Conducted comprehensive risk assessments for commercial loans, minimizing default rates by 12%.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Project</Data></Cell>
+    <Cell><Data ss:Type="String">Enterprise Financial Restructuring (2022)</Data></Cell>
+    <Cell><Data ss:Type="String">Client: Al Aali International Group</Data></Cell>
+    <Cell><Data ss:Type="String">CHALLENGE: The client was facing decreasing profit margins due to inefficient resource allocation and outdated financial processes. ACTION: Conducted a top-down financial audit. Redesigned the operational budget and renegotiated vendor contracts to minimize overhead. RESULT: Increased net profit margins by 18% within the first fiscal year and reduced operational waste by $2.5M.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Project</Data></Cell>
+    <Cell><Data ss:Type="String">Market Expansion Strategy (2019)</Data></Cell>
+    <Cell><Data ss:Type="String">Client: Regional Logistics Firm</Data></Cell>
+    <Cell><Data ss:Type="String">CHALLENGE: The firm needed to expand into three new regional markets but lacked a sustainable financial runway and risk assessment. ACTION: Developed a comprehensive 5-year financial projection model and secured $15M in strategic venture funding. RESULT: Successful expansion into all three markets ahead of schedule, with a 30% increase in total market share.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Project</Data></Cell>
+    <Cell><Data ss:Type="String">Risk Mitigation Framework (2016)</Data></Cell>
+    <Cell><Data ss:Type="String">Client: Mid-Size Manufacturing Co.</Data></Cell>
+    <Cell><Data ss:Type="String">CHALLENGE: High exposure to foreign exchange volatility was severely impacting quarterly earnings. ACTION: Implemented a dynamic hedging strategy and restructured international supplier payments. RESULT: Stabilized quarterly earnings and saved the company over $1.2M in currency exchange losses annually.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Education</Data></Cell>
+    <Cell><Data ss:Type="String">Master of Business Administration (MBA)</Data></Cell>
+    <Cell><Data ss:Type="String">Qatar University</Data></Cell>
+    <Cell><Data ss:Type="String">2010 - 2012</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Education</Data></Cell>
+    <Cell><Data ss:Type="String">Bachelor of Science in Accounting</Data></Cell>
+    <Cell><Data ss:Type="String">Cairo University</Data></Cell>
+    <Cell><Data ss:Type="String">1994 - 1998</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Education</Data></Cell>
+    <Cell><Data ss:Type="String">Certified Financial Analyst (CFA)</Data></Cell>
+    <Cell><Data ss:Type="String">CFA Institute</Data></Cell>
+    <Cell><Data ss:Type="String">2014</Data></Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+</Workbook>

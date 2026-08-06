@@ -625,13 +625,13 @@ ul {
     color: var(--text-light);
 }
 .logo-banner {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
     align-items: center;
-    flex-wrap: nowrap;
-    gap: 2rem;
-    overflow-x: auto;
-    padding-bottom: 1rem; /* For scrollbar if needed */
+    gap: 4rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
 }
 .logo-item {
     font-size: 1.25rem;
@@ -643,9 +643,9 @@ ul {
 
 .client-logo {
     max-width: 100%;
-    width: 250px;
+    width: 400px;
     height: auto;
-    max-height: 120px;
+    max-height: 200px;
     object-fit: contain;
     mix-blend-mode: multiply;
 }
