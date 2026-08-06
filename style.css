@@ -833,6 +833,12 @@ ul {
     align-items: center;
     font-family: inherit;
 }
+.expertise-grid {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 1.5rem;
+}
+
 .accordion-content {
     max-height: 0;
     overflow: hidden;
@@ -957,8 +963,18 @@ ul {
 @media (max-width: 768px) {
     .section-padding { padding: 4rem 0; }
     
-    .logo-banner { gap: 1.5rem; }
+    .logo-banner { 
+        grid-template-columns: 1fr;
+        gap: 3rem; 
+    }
     .logo-item { font-size: 1rem; }
+    
+    .expertise-block {
+        padding: 2rem 1.5rem !important;
+    }
+    .expertise-grid {
+        grid-template-columns: 1fr !important;
+    }
     
     .about-grid, .process-container {
         grid-template-columns: 1fr;
