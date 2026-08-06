@@ -32,21 +32,19 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
+                <img src="assets/profile.png" alt="Essameldin" class="nav-profile-pic" style="background-color: white;">
                 <div class="logo-text">
-                    <span class="logo-name">Essameldin Salama</span>
-                    <span class="logo-subtitle">Financial Advisor</span>
+                    <span class="logo-name">Essameldin</span>
+                    <span class="logo-subtitle">Trusted Executive Advisor</span>
                 </div>
             </div>
             <ul class="nav-links">
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#philosophy">Philosophy</a></li>
-                <li><a href="#expertise">Expertise</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#faq">FAQ</a></li>
+                <li><a href="index.html">About Me</a></li>
+                <li><a href="experience.html">Professional Experience</a></li>
+                <li><a href="projects.html">Projects</a></li>
             </ul>
             <div class="nav-actions">
                 <a href="https://www.linkedin.com/in/essameldin56/" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="https://wa.me/97466205660" target="_blank" rel="noopener noreferrer" class="btn-primary nav-cta">Let's Talk</a>
                 <button class="menu-toggle" aria-label="Toggle Navigation">
                     <i class="fa-solid fa-bars"></i>
                 </button>
@@ -70,16 +68,16 @@
                 
                 <div class="education-block mt-4">
                     <h4>Education & Foundation</h4>
-                    <ul class="check-list">
-                        <li><i class="fa-solid fa-graduation-cap"></i> <span><strong>MBA</strong> - Woolf</span></li>
-                        <li><i class="fa-solid fa-graduation-cap"></i> <span><strong>BSc Commerce, Accounting & Economics</strong> - Alexandria University</span></li>
-                        <li><i class="fa-solid fa-building-columns"></i> <span><strong>Early Foundation:</strong> Senior Accountant at Arthur Andersen (1990)</span></li>
+                    <ul>
+                        <li><strong>MBA</strong> – Woolf University (In Progress)</li>
+                        <li><strong>BSc Commerce, Accounting & Economics</strong> – Alexandria University</li>
+                        <li><strong>Professional Member</strong> – Institute of Internal Auditors (since 1996)</li>
                     </ul>
                 </div>
-
+                
                 <div class="hero-buttons" style="justify-content: flex-start; margin-top: 2.5rem; flex-wrap: wrap;">
                     <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/YOUR_LINK_HERE'});return false;" class="btn-primary">Schedule a Strategic Consultation</a>
-                    <a href="#projects" class="btn-secondary" style="border-color: var(--primary-color); color: var(--primary-color);">View Signature Projects</a>
+                    <a href="projects.html" class="btn-secondary" style="border-color: var(--primary-color); color: var(--primary-color);">View Signature Projects</a>
                     <a href="assets/Essameldin_Salama_CV.pdf" target="_blank" class="btn-secondary" style="border-color: var(--primary-color); color: var(--primary-color);"><i class="fa-solid fa-file-pdf"></i> Download CV</a>
                 </div>
             </div>
@@ -127,314 +125,44 @@
         </div>
     </div>
 
-    <!-- Philosophy / Value Proposition (NEW) -->
-    <section id="philosophy" class="philosophy section-padding bg-light">
-        <div class="container text-center">
-            <div class="section-badge mx-auto">Core Philosophy</div>
-            <h2 class="section-title reveal mb-4">Why Partner With Me?</h2>
-            <p class="section-subtitle reveal mx-auto mb-5 max-w-800">True transformation requires more than just financial acumen—it demands structured problem solving, stakeholder alignment, and an unwavering commitment to operational excellence.</p>
+    <!-- Other sections moved to experience.html and projects.html -->
+
+    <!-- FAQ Section -->
+    <section class="faq section-padding" style="background-color: white;">
+        <div class="container mx-auto" style="max-width: 800px; padding: 0 1rem;">
+            <div style="text-align: center;">
+                <div class="section-badge mb-4" style="background: #DBEAFE; color: #2563EB; font-weight: 700; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; display: inline-block;">Clarity</div>
+            </div>
+            <h2 class="section-title reveal text-center mb-5" style="color: #0F172A; font-weight: 700; font-size: 2.25rem; letter-spacing: -0.5px;">Frequently Asked Questions</h2>
             
-            <div class="services-grid">
-                <div class="philosophy-card reveal">
-                    <a href="#" class="icon-link"><div class="card-icon"><i class="fa-solid fa-chess-knight"></i></div></a>
-                    <h3>Strategic Insight-Led</h3>
-                    <p>Moving beyond basic reporting to deliver data-informed insights that empower executive leadership to make critical capital and operational decisions confidently.</p>
-                </div>
-                <div class="philosophy-card reveal delay-100">
-                    <a href="#" class="icon-link"><div class="card-icon"><i class="fa-solid fa-scale-balanced"></i></div></a>
-                    <h3>Governance & Control</h3>
-                    <p>Establishing robust financial controls, Delegation of Authority (DoA) frameworks, and accountability mechanisms that protect and scale major enterprises.</p>
-                </div>
-                <div class="philosophy-card reveal delay-200">
-                    <a href="#" class="icon-link"><div class="card-icon"><i class="fa-solid fa-users-gear"></i></div></a>
-                    <h3>Cross-Functional Leadership</h3>
-                    <p>Bridging the gap between finance, IT, and operations to ensure seamless ERP rollouts, process automation, and holistic business alignment.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="expertise" class="services section-padding">
-        <div class="container">
-            <div class="section-badge text-center mx-auto">Areas of Impact</div>
-            <h2 class="section-title reveal text-center">Executive Expertise</h2>
-            <div class="services-grid">
-                <div class="service-card reveal">
-                    <a href="#" class="icon-link"><div class="card-icon"><i class="fa-solid fa-money-bill-trend-up"></i></div></a>
-                    <h3>Finance Transformation</h3>
-                    <p>Led IPSAS first-time adoption, strategic planning, ERP alignment, and comprehensive process redesign for major government and private entities.</p>
-                </div>
-                <div class="service-card reveal delay-100">
-                    <a href="#" class="icon-link"><div class="card-icon"><i class="fa-solid fa-chart-line"></i></div></a>
-                    <h3>Strategic Planning & Performance</h3>
-                    <p>Enhanced budgeting, forecasting, and project financial control disciplines across complex, multi-billion-dollar infrastructure portfolios.</p>
-                </div>
-                <div class="service-card reveal delay-200">
-                    <a href="#" class="icon-link"><div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div></a>
-                    <h3>Governance & Decision Support</h3>
-                    <p>Contributed to risk management, policy development, and structured problem-solving for Board-level and Government stakeholders.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Signature Projects Section (Timeline Redesign) -->
-    <section id="projects" class="projects section-padding bg-light">
-        <div class="container">
-            <div class="section-badge mx-auto text-center">Track Record</div>
-            <h2 class="section-title reveal text-center">Signature Mega-Projects</h2>
-            
-            <div class="timeline-container">
-                <div class="timeline-line"></div>
-                
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">2018 - Present</div>
-                    <div class="timeline-content">
-                        <h3>Finance Transformation Program</h3>
-                        <div class="project-client">Public Works Authority 'Ashghal' – Qatar</div>
-                        <p>Serving as Program Manager and Senior Strategic Advisor, acting as a catalyst for governance enhancement and performance improvement across a major public-sector organization.</p>
-                        
-                        <div class="car-framework mt-4">
-                            <button class="car-toggle">View Case Study <i class="fa-solid fa-plus"></i></button>
-                            <div class="car-content">
-                                <div class="car-section">
-                                    <strong>Challenge:</strong> <span>The organization needed to transition to accrual-based accounting (IPSAS) and modernize financial governance.</span>
-                                </div>
-                                <div class="car-section">
-                                    <strong>Action:</strong> <span>Led the strategic alignment between executive business needs and technical ERP capabilities.</span>
-                                </div>
-                                <div class="car-section">
-                                    <strong>Result:</strong> <span>Successfully established a culture of accountability and improved executive visibility into capital deployment.</span>
-                                </div>
-                                <a href="https://www.ashghal.gov.qa/" target="_blank" class="btn-primary" style="margin-top:1rem; font-size:0.9rem; display:inline-block;">View Live Site <i class="fa-solid fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="timeline-item reveal delay-100">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">2007 - 2014</div>
-                    <div class="timeline-content">
-                        <h3>KPIZ - Khalifa Port & Industrial Zone</h3>
-                        <div class="project-client">Abu Dhabi Ports Company (ADPC)</div>
-                        <p>Held VP Finance role leading Project Financial Controls, overseeing financial governance of capital programs exceeding multi-billion-dollar values.</p>
-                        
-                        <div class="car-framework mt-4">
-                            <button class="car-toggle">View Case Study <i class="fa-solid fa-plus"></i></button>
-                            <div class="car-content">
-                                <div class="car-section">
-                                    <strong>Challenge:</strong> <span>Managing the financial controls and cash flow forecasting for an unprecedented offshore port mega-project.</span>
-                                </div>
-                                <div class="car-section">
-                                    <strong>Action:</strong> <span>Developed and implemented rigorous project financial controls from scratch.</span>
-                                </div>
-                                <div class="car-section">
-                                    <strong>Result:</strong> <span>Delivered high-fidelity financial visibility to the Board of Directors.</span>
-                                </div>
-                                <a href="https://www.adportsgroup.com/" target="_blank" class="btn-primary" style="margin-top:1rem; font-size:0.9rem; display:inline-block;">View Live Site <i class="fa-solid fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item reveal delay-200">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">2006 - 2007</div>
-                    <div class="timeline-content">
-                        <h3>Flagship Development Portfolios</h3>
-                        <div class="project-client">Nakheel – UAE</div>
-                        <p>As Financial Planning & Reporting Manager, delivered comprehensive five-year forecasts for world-class mega projects during a historic expansion phase.</p>
-                        
-                        <div class="car-framework mt-4">
-                            <button class="car-toggle">View Case Study <i class="fa-solid fa-plus"></i></button>
-                            <div class="car-content">
-                                <div class="car-section">
-                                    <strong>Challenge:</strong> <span>The rapid scale of development required highly complex, long-term financial modeling.</span>
-                                </div>
-                                <div class="car-section">
-                                    <strong>Action:</strong> <span>Engineered integrated five-year forecasts covering both financial and commercial dimensions.</span>
-                                </div>
-                                <div class="car-section">
-                                    <strong>Result:</strong> <span>Provided the critical data backbone needed for Board-level reporting and investment decisions.</span>
-                                </div>
-                                <a href="https://www.nakheel.com/" target="_blank" class="btn-primary" style="margin-top:1rem; font-size:0.9rem; display:inline-block;">View Live Site <i class="fa-solid fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item reveal delay-100">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">1996 - 2006</div>
-                    <div class="timeline-content">
-                        <h3>Finance & Commercial Management</h3>
-                        <div class="project-client">Major Petroleum & Gas Sector (Egypt & Gulf)</div>
-                        <p>Directed financial strategies, budgeting, and performance management for large-scale petroleum operations, ensuring strict compliance and cost control.</p>
-                        
-                        <div class="car-framework mt-4">
-                            <button class="car-toggle">View Case Study <i class="fa-solid fa-plus"></i></button>
-                            <div class="car-content">
-                                <div class="car-section">
-                                    <strong>Challenge:</strong> <span>Navigating volatile market conditions while maintaining strict budgetary control over capital-intensive exploration and production projects.</span>
-                                </div>
-                                <div class="car-section">
-                                    <strong>Action:</strong> <span>Implemented comprehensive performance measurement systems and variance analysis frameworks for operational budgeting.</span>
-                                </div>
-                                <div class="car-section">
-                                    <strong>Result:</strong> <span>Optimized cash flow forecasting, eliminated structural inefficiencies, and safeguarded critical investments.</span>
-                                </div>
-                                <a href="#" target="_blank" class="btn-primary" style="margin-top:1rem; font-size:0.9rem; display:inline-block;">View Live Site <i class="fa-solid fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item reveal delay-200">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">1990 - 1996</div>
-                    <div class="timeline-content">
-                        <h3>Senior Accountant</h3>
-                        <div class="project-client">Arthur Andersen – Egypt</div>
-                        <p>Established early career foundation in rigorous financial auditing, internal controls, and enterprise accounting standards at a top global firm.</p>
-                        
-                        <div class="car-framework mt-4">
-                            <button class="car-toggle">View Case Study <i class="fa-solid fa-plus"></i></button>
-                            <div class="car-content">
-                                <div class="car-section">
-                                    <strong>Challenge:</strong> <span>Ensuring precise compliance and financial integrity for rapidly scaling corporate clients.</span>
-                                </div>
-                                <div class="car-section">
-                                    <strong>Action:</strong> <span>Executed detailed audits, identified systemic weaknesses in client financial reporting, and recommended robust internal controls.</span>
-                                </div>
-                                <div class="car-section">
-                                    <strong>Result:</strong> <span>Built a strong foundation in forensic accounting, risk mitigation, and executive-level financial reporting.</span>
-                                </div>
-                                <a href="#" target="_blank" class="btn-primary" style="margin-top:1rem; font-size:0.9rem; display:inline-block;">View Live Site <i class="fa-solid fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Approach / Process Section -->
-    <section id="process" class="process-section">
-        <div class="process-container">
-            <div class="process-sticky reveal">
-                <div class="section-badge">Methodology</div>
-                <h2>Our Engagement Approach</h2>
-                <p>Disciplined execution from discovery to transformation.</p>
-            </div>
-            <div class="process-steps">
-                <div class="step-card reveal">
-                    <div class="step-number">01</div>
-                    <h3>Strategic Discovery</h3>
-                    <p>We analyze the complexity of your current financial structures, governance models, and operational friction points across all entities.</p>
-                </div>
-                <div class="step-card reveal">
-                    <div class="step-number">02</div>
-                    <h3>Insight-Led Strategy</h3>
-                    <p>I develop data-informed modernization frameworks, spanning ERP readiness, commercial costing, internal controls, and performance measurement.</p>
-                </div>
-                <div class="step-card reveal">
-                    <div class="step-number">03</div>
-                    <h3>Disciplined Execution</h3>
-                    <p>We bridge business needs with systems solutions, acting as a catalyst for change and cultivating a culture of accountability and continuous improvement.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Insights / Thought Leadership Section (NEW) -->
-    <section id="insights" class="insights section-padding">
-        <div class="container">
-            <div class="section-badge mx-auto text-center">Thought Leadership</div>
-            <h2 class="section-title reveal text-center">Executive Insights</h2>
-            
-            <div class="insights-grid">
-                <div class="insight-card reveal">
-                    <div class="insight-category">Finance Transformation</div>
-                    <h3>Navigating IPSAS Adoption: The Real Cost of Delayed Transformation</h3>
-                    <p>Transitioning to accrual accounting is more than a compliance exercise; it fundamentally shifts how public-sector capital is managed and deployed.</p>
-                    <a href="#contact" class="read-more">Request Full Brief <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-                <div class="insight-card reveal delay-100">
-                    <div class="insight-category">Corporate Governance</div>
-                    <h3>Beyond the Spreadsheet: Reimagining the Role of the Modern CFO</h3>
-                    <p>In high-stakes infrastructure portfolios, financial leadership requires bridging the gap between engineering reality and commercial viability.</p>
-                    <a href="#contact" class="read-more">Request Full Brief <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-                <div class="insight-card reveal delay-200">
-                    <div class="insight-category">Strategic Planning</div>
-                    <h3>The 3 Pillars of ERP Readiness for Mega-Projects</h3>
-                    <p>Why most multi-billion-dollar ERP implementations fail, and how establishing robust Delegation of Authority (DoA) frameworks prevents it.</p>
-                    <a href="#contact" class="read-more">Request Full Brief <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Endorsements / Testimonials (NEW) -->
-    <section class="testimonials section-padding bg-light">
-        <div class="container">
-            <div class="section-badge mx-auto text-center">Social Proof</div>
-            <h2 class="section-title reveal text-center">Endorsed by Executives</h2>
-            
-            <div class="testimonial-grid">
-                <div class="testimonial-card reveal">
-                    <p>"Essameldin brings an unparalleled depth of strategic vision and operational discipline. His work in establishing our project financial controls completely transformed our executive visibility during a high-growth phase."</p>
-                    <div class="testimonial-author">
-                        <strong>Former Executive Colleague</strong>
-                        <span>Abu Dhabi Ports Company</span>
-                    </div>
-                </div>
-                <div class="testimonial-card reveal delay-150">
-                    <p>"A master at bridging complex business needs with system solutions. He didn't just redesign our finance operations; he cultivated a culture of true accountability and performance."</p>
-                    <div class="testimonial-author">
-                        <strong>Finance Leadership</strong>
-                        <span>Public Works Authority 'Ashghal'</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section (NEW) -->
-    <section id="faq" class="faq section-padding">
-        <div class="container max-w-800">
-            <div class="section-badge text-center mx-auto">Clarity</div>
-            <h2 class="section-title reveal text-center">Frequently Asked Questions</h2>
-            
-            <div class="accordion reveal">
-                <div class="accordion-item">
-                    <button class="accordion-header">
+            <div class="accordion-container">
+                <div class="accordion-item reveal">
+                    <button class="accordion-header" style="color: #1E293B; font-weight: 600; font-size: 1.1rem;">
                         What types of organizations do you typically advise?
-                        <i class="fa-solid fa-chevron-down accordion-icon"></i>
+                        <i class="fa-solid fa-chevron-down accordion-icon" style="color: #2563EB; font-size: 1rem;"></i>
                     </button>
                     <div class="accordion-content">
-                        <p>I primarily work with major government entities, large-scale infrastructure and port operators, petroleum companies, and significant family-owned business groups undergoing rapid expansion or transformation in the Gulf and Egypt regions.</p>
+                        <p style="color: #475569; line-height: 1.7; font-size: 1rem;">I primarily advise major public sector entities, global infrastructure developers, and large-scale petroleum and gas corporations across the Gulf and Egypt. My experience is heavily concentrated in environments managing multi-billion dollar capital programs.</p>
                     </div>
                 </div>
-                <div class="accordion-item">
-                    <button class="accordion-header">
+                
+                <div class="accordion-item reveal delay-100">
+                    <button class="accordion-header" style="color: #1E293B; font-weight: 600; font-size: 1.1rem;">
                         Do you handle ERP implementation directly?
-                        <i class="fa-solid fa-chevron-down accordion-icon"></i>
+                        <i class="fa-solid fa-chevron-down accordion-icon" style="color: #2563EB; font-size: 1rem;"></i>
                     </button>
                     <div class="accordion-content">
-                        <p>I focus on **ERP readiness and alignment**. I bridge the critical gap between executive business needs and technical systems solutions (like Oracle), ensuring that the technology actually improves efficiency, control, and management insight.</p>
+                        <p style="color: #475569; line-height: 1.7; font-size: 1rem;">While I don't configure the code for systems like Oracle or SAP directly, my expertise lies in the critical step before and during implementation: translating complex C-suite financial needs into precise technical requirements to ensure the final system actually serves the executive vision.</p>
                     </div>
                 </div>
-                <div class="accordion-item">
-                    <button class="accordion-header">
+                
+                <div class="accordion-item reveal delay-200">
+                    <button class="accordion-header" style="color: #1E293B; font-weight: 600; font-size: 1.1rem;">
                         How do you approach finance transformation?
-                        <i class="fa-solid fa-chevron-down accordion-icon"></i>
+                        <i class="fa-solid fa-chevron-down accordion-icon" style="color: #2563EB; font-size: 1rem;"></i>
                     </button>
                     <div class="accordion-content">
-                        <p>Transformation must be holistic. I look at process redesign, policy development (like IPSAS adoption), strengthened internal controls, and automation simultaneously. It's about building a capable team and a stronger culture of accountability.</p>
+                        <p style="color: #475569; line-height: 1.7; font-size: 1rem;">My approach centers on deeply embedding financial accountability throughout the entire organization, not just the finance department. From leading first-time IPSAS adoptions to redesigning operational workflows, the goal is total structural alignment between strategy and execution.</p>
                     </div>
                 </div>
             </div>
@@ -456,7 +184,7 @@
                 <div class="info-item">
                     <a href="mailto:essamslama@hotmail.com" class="icon-link"><i class="fa-solid fa-envelope mb-2 icon-hover"></i></a>
                     <strong>Email</strong>
-                    <p><a href="mailto:essamslama@hotmail.com" class="email-obfuscate" data-user="essamslama" data-domain="hotmail.com" style="color:inherit;text-decoration:none;">Click to Reveal</a></p>
+                    <p><a href="mailto:essamslama@hotmail.com" style="color:inherit;text-decoration:none;">essamslama@hotmail.com</a></p>
                 </div>
                 <div class="info-item">
                     <a href="https://maps.google.com/?q=Doha,Qatar" target="_blank" class="icon-link"><i class="fa-solid fa-location-dot mb-2 icon-hover"></i></a>
@@ -470,7 +198,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-top">
-                <div class="footer-logo">Essameldin Salama</div>
+                <div class="footer-logo">Essameldin</div>
                 <div class="footer-socials">
                     <a href="https://www.linkedin.com/in/essameldin56/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
@@ -478,9 +206,15 @@
             <p class="legal-text">
                 This site and its contents are for informational purposes only. Past performance in mega-projects or organizational transformations does not guarantee future results. Engagement terms and advisory scope are subject to formal consultation agreements.
             </p>
-            <p class="copyright">© 2026 Essameldin Salama. All rights reserved.</p>
+            <p class="copyright">© 2026 Essameldin. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- WhatsApp Widget -->
+    <a href="https://wa.me/97466205660" target="_blank" class="whatsapp-widget">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="whatsapp-text">Let's Talk</span>
+    </a>
 
     <script src="script.js"></script>
     

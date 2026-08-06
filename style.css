@@ -115,10 +115,36 @@ ul {
     align-items: center;
 }
 
+.check-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #475569;
+}
+
+/* Expertise Block Animations */
+.expertise-block {
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+}
+.expertise-block:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.1) !important;
+}
+.expertise-block i {
+    transition: transform 0.4s ease;
+}
+.expertise-block:hover i {
+    transform: scale(1.15) rotate(5deg);
+}
+
 .logo {
     display: flex;
     align-items: center;
     gap: 0.75rem;
+    flex: 1;
 }
 
 .logo-text {
@@ -136,7 +162,7 @@ ul {
 }
 
 .logo-subtitle {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     color: var(--accent-color);
     font-weight: 800;
     text-transform: uppercase;
@@ -148,12 +174,27 @@ ul {
     height: 45px;
     object-fit: cover;
     border-radius: 50%;
-    mix-blend-mode: multiply;
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .nav-links {
     display: flex;
     gap: 2rem;
+    flex: none;
+    margin-left: auto;
+    margin-right: 8rem;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+.nav-actions .social-icon {
+    font-size: 1.75rem;
 }
 
 .nav-links a {
@@ -483,15 +524,23 @@ ul {
     color: white;
 }
 
+.footer-socials {
+    display: flex;
+    justify-content: flex-end;
+}
+
 .footer-socials a {
-    color: rgba(255,255,255,0.5);
-    font-size: 1.25rem;
-    transition: var(--transition-smooth);
+    font-size: 1.75rem;
+    color: rgba(255,255,255,0.7);
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
 }
 
 .footer-socials a:hover {
-    color: var(--accent-color);
+    color: #0077B5; /* LinkedIn Blue */
+    transform: scale(1.1);
 }
+
 
 .legal-text {
     margin-bottom: 2rem;
@@ -790,6 +839,44 @@ ul {
     }
 }
 
+/* WhatsApp Widget */
+.whatsapp-widget {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25D366; /* WhatsApp Green */
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+    z-index: 1000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+}
+.whatsapp-widget:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(37, 211, 102, 0.4);
+    color: white;
+}
+.whatsapp-widget i {
+    font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .whatsapp-widget {
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 16px;
+        font-size: 0.9rem;
+    }
+    .whatsapp-widget i {
+        font-size: 1.25rem;
+    }
+}
 
 .btn-secondary {
     display: inline-block;
@@ -889,6 +976,7 @@ ul {
         top: 100%;
         left: 0;
         width: 100%;
+        margin: 0;
         background: white;
         flex-direction: column;
         padding: 3rem 0;
@@ -911,13 +999,17 @@ ul {
     }
     
     .nav-container {
-        padding: 1.25rem 1.5rem;
+        padding: 0.85rem 1.5rem;
     }
     
     .footer-top {
         flex-direction: column;
         gap: 1.5rem;
         text-align: center;
+    }
+
+    .footer-socials {
+        justify-content: center;
     }
     
     .section-title {
