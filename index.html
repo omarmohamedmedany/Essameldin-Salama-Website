@@ -26,7 +26,7 @@
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
     <!-- Calendly link widget end -->
 
-    <link rel="stylesheet" href="style.css?v=13">
+    <link rel="stylesheet" href="style.css?v=16">
     <!-- Schema.org Markup -->
     <script type="application/ld+json">
     {
@@ -271,15 +271,21 @@
     <script>
         // Detect if a dark mode extension (like Dark Reader) is forcing the body to be dark
         function checkForcedDarkMode() {
-            var bgColor = window.getComputedStyle(document.body).backgroundColor;
-            var rgb = bgColor.match(/\d+/g);
-            if (rgb && rgb.length >= 3) {
-                var brightness = (parseInt(rgb[0]) * 299 + parseInt(rgb[1]) * 587 + parseInt(rgb[2]) * 114) / 1000;
-                if (brightness < 128) {
-                    document.body.classList.add('dark-mode-forced');
-                } else {
-                    document.body.classList.remove('dark-mode-forced');
-                }
+            function isDark(element) {
+                if (!element) return false;
+                var bgColor = window.getComputedStyle(element).backgroundColor;
+                var rgba = bgColor.match(/[\d.]+/g);
+                if (!rgba || rgba.length < 3) return false;
+                if (rgba.length === 4 && parseFloat(rgba[3]) === 0) return false; // Ignore transparent
+                var brightness = (parseInt(rgba[0]) * 299 + parseInt(rgba[1]) * 587 + parseInt(rgba[2]) * 114) / 1000;
+                return brightness < 128;
+            }
+            
+            var banner = document.querySelector('.logo-banner-section');
+            if (isDark(document.body) || isDark(document.documentElement) || isDark(banner)) {
+                document.body.classList.add('dark-mode-forced');
+            } else {
+                document.body.classList.remove('dark-mode-forced');
             }
         }
         window.addEventListener('load', function() {
