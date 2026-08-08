@@ -343,11 +343,23 @@ ul {
     align-items: center;
 }
 
+.about-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    border: 4px solid #000000; /* Black outline */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
 .about-image img {
     width: 100%;
-    object-fit: contain;
-    mix-blend-mode: multiply;
-    border-radius: 50%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.15); /* Zoom in to crop out the white ring */
+    border-radius: 0;
+    border: none;
 }
 
 .credentials {
@@ -1119,6 +1131,9 @@ ul {
     .accordion-header { font-size: 1.1rem; }
     .logo { font-size: 1.1rem; }
     
+    .edu-logo { margin-right: 0.75rem; }
+    .education-item { font-size: 0.95rem; }
+    
     .hero-buttons {
         margin-top: 1.5rem;
     }
@@ -1195,4 +1210,42 @@ ul {
     height: 100%;
     background-color: var(--accent-color);
     width: 0%;
+}
+
+/* Education List Logos */
+.education-list {
+    margin-top: 1.5rem;
+}
+.education-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.25rem;
+}
+.edu-logo {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    margin-right: 1.25rem;
+    flex-shrink: 0;
+    border-radius: 6px;
+    background-color: #ffffff;
+    border: 1px solid rgba(0,0,0,0.08);
+    padding: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.04);
+}
+.fix-black {
+    filter: invert(1); 
+}
+
+.edu-link {
+    margin-left: 0.75rem;
+    color: var(--text-light);
+    font-size: 0.95rem;
+    transition: transform 0.2s ease, color 0.2s ease;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+.edu-link:hover {
+    color: var(--primary-color);
+    transform: translateX(2px) translateY(-2px);
 }

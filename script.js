@@ -16,6 +16,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 const counters = entry.target.querySelectorAll('.stat-number');
                 if (counters.length > 0) {
                     counters.forEach(counter => {
+                        // Prevent rapid re-triggering while already animating
+                        if (counter.dataset.animated === "true") return;
+                        counter.dataset.animated = "true";
+
                         const target = +counter.getAttribute('data-target');
                         const duration = 2000; // ms
                         const increment = target / (duration / 16); // 60fps
@@ -34,8 +38,19 @@ document.addEventListener("DOMContentLoaded", () => {
                         updateCounter();
                     });
                 }
+            } else {
+                // Reset everything when scrolled out of view
+                entry.target.classList.remove("active");
                 
-                observer.unobserve(entry.target); // Only animate once
+                const counters = entry.target.querySelectorAll('.stat-number');
+                if (counters.length > 0) {
+                    counters.forEach(counter => {
+                        counter.dataset.animated = "false";
+                        const target = +counter.getAttribute('data-target');
+                        let base = target > 1000 ? target - 50 : 0;
+                        counter.innerText = base;
+                    });
+                }
             }
         });
     }, revealOptions);
