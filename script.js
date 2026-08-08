@@ -178,4 +178,48 @@ document.addEventListener("DOMContentLoaded", () => {
             bar.style.width = scrolled + "%";
         });
     });
+
+    // -----------------------------------------
+    // Custom Magnetic Cursor
+    // -----------------------------------------
+    // Removed per user request
+
+    // -----------------------------------------
+    // Dynamic Typewriter Effect
+    // -----------------------------------------
+    const typeTarget = document.querySelector('.typewriter-text');
+    if (typeTarget) {
+        const textArray = [
+            "Senior Strategic Advisor", 
+            "Finance Transformation Expert", 
+            "IPSAS Implementation Champion", 
+            "Mega-Project Director"
+        ];
+        let textIndex = 0;
+        let charIndex = 0;
+
+        function type() {
+            if (charIndex < textArray[textIndex].length) {
+                typeTarget.textContent += textArray[textIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(type, 50); // Sped up typing (was 80)
+            } else {
+                setTimeout(erase, 1500); // Shorter pause before erasing (was 2500)
+            }
+        }
+
+        function erase() {
+            if (charIndex > 0) {
+                typeTarget.textContent = textArray[textIndex].substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(erase, 25); // Sped up erasing (was 40)
+            } else {
+                textIndex++;
+                if (textIndex >= textArray.length) textIndex = 0;
+                setTimeout(type, 300); // Faster switch to next word
+            }
+        }
+
+        setTimeout(type, 1000);
+    }
 });
