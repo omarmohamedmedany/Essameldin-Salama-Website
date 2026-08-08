@@ -736,7 +736,7 @@ ul {
     font-size: 1.1rem;
     color: var(--text-main);
     margin-bottom: 1.5rem;
-    text-align: justify;
+    text-align: left;
 }
 
 .media-thumbnail-card p {
@@ -1201,7 +1201,10 @@ ul {
         gap: 3rem;
     }
 
-    .contact-info {
+    .contact-info,
+    .services-grid,
+    .insights-grid,
+    .media-gallery-grid {
         grid-template-columns: 1fr;
         gap: 2.5rem;
     }
@@ -1232,11 +1235,11 @@ ul {
         display: flex;
         position: absolute;
         top: 100%;
-        left: 1.5rem;
+        left: 1rem;
         right: auto;
-        margin-top: 0.5rem;
+        margin: 0.5rem 0 0 0;
         width: max-content;
-        max-width: calc(100% - 3rem);
+        max-width: calc(100vw - 2rem);
         background: #FCFCFC;
         flex-direction: column;
         padding: 0.5rem 0;
@@ -1253,7 +1256,7 @@ ul {
         font-weight: 500;
         width: 100%;
         text-align: left;
-        padding: 1.25rem 2rem;
+        padding: 1.25rem 1.25rem; /* Reduced padding to fit tiny screens */
         display: block;
         color: var(--text-main);
     }
@@ -1272,8 +1275,8 @@ ul {
         content: '';
         position: absolute;
         bottom: 0;
-        left: 2rem;
-        right: 2rem;
+        left: 1.25rem;
+        right: 1.25rem;
         height: 1px;
         background-color: #E2E8F0;
     }
@@ -1322,6 +1325,11 @@ ul {
     }
     .timeline-content {
         padding: 1.5rem;
+    }
+    
+    /* Revert text justification on mobile to prevent huge spaces between words */
+    .about-text p, .car-section {
+        text-align: left !important;
     }
 }
 
@@ -1394,7 +1402,7 @@ ul {
 .car-section {
     margin-bottom: 0.75rem;
     line-height: 1.5;
-    text-align: justify;
+    text-align: left;
 }
 .car-section:last-child {
     margin-bottom: 0;
