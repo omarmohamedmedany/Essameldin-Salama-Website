@@ -1235,8 +1235,8 @@ ul {
         display: flex;
         position: absolute;
         top: 100%;
-        left: 1rem;
-        right: auto;
+        right: 1rem;
+        left: auto;
         margin: 0.5rem 0 0 0;
         width: max-content;
         max-width: calc(100vw - 2rem);
