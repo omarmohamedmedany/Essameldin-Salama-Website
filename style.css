@@ -209,6 +209,12 @@ ul {
 
 .nav-actions .social-icon {
     font-size: 1.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links a {
@@ -1234,11 +1240,27 @@ ul {
     }
     
     .nav-links.active a {
-        font-size: 1.25rem;
-        font-weight: 600;
+        font-size: 1rem;
+        font-weight: 500;
         width: 100%;
-        text-align: center;
+        text-align: left;
+        padding-left: 2rem;
         display: block;
+    }
+    
+    .nav-links.active li {
+        width: 100%;
+        position: relative;
+    }
+    
+    .nav-links.active li:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        bottom: -1.25rem;
+        left: 2rem; /* Align with the text padding */
+        width: calc(100% - 4rem); /* Span across but leave margin */
+        height: 2px; /* Made thicker */
+        background-color: rgba(0,0,0,0.3); /* Made darker so it's clearly visible */
     }
     
     .nav-links.active a::after {
@@ -1246,7 +1268,13 @@ ul {
     }
     
     .menu-toggle {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+        line-height: 1;
+        font-size: 1.75rem;
     }
     
     .nav-container {
