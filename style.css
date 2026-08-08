@@ -966,8 +966,6 @@ ul {
 .social-icon { font-size: 1.25rem; color: var(--text-main); transition: color 0.3s ease; }
 .social-icon:hover { color: #0077B5; /* LinkedIn Blue */ }
 
-
-
 /* Card Icon Interactions */
 .icon-link {
     display: inline-block;
@@ -1248,4 +1246,16 @@ ul {
 .edu-link:hover {
     color: var(--primary-color);
     transform: translateX(2px) translateY(-2px);
+}
+
+/* Apply dark mode filters ONLY when the browser background is actually black */
+body.dark-mode-forced .edu-logo {
+    background-color: #000000;
+    border-color: rgba(255,255,255,0.1);
+    filter: invert(1) hue-rotate(180deg) brightness(1.2);
+}
+
+body.dark-mode-forced .client-logo {
+    mix-blend-mode: normal;
+    filter: invert(1) hue-rotate(180deg) brightness(1.2);
 }
