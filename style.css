@@ -47,6 +47,10 @@ h1, h2, h3, h4 {
     word-break: break-word;
 }
 
+p {
+    /* Removed global justify to prevent UI breakage */
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -349,7 +353,7 @@ ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
-    align-items: center;
+    align-items: flex-start; /* Changed from center so image aligns with top of text */
 }
 
 .about-image {
@@ -360,6 +364,7 @@ ul {
     border: 4px solid #808080; /* Grey outline */
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     overflow: hidden;
+    margin-top: 3.5rem; /* Pushes the image down slightly from the absolute top to find the visual center */
 }
 
 .about-image img {
@@ -727,10 +732,11 @@ ul {
     text-align: left;
 }
 
-.media-thumbnail-card h4 {
+.about-text p {
     font-size: 1.1rem;
-    color: white;
-    margin-bottom: 0.5rem;
+    color: var(--text-main);
+    margin-bottom: 1.5rem;
+    text-align: justify;
 }
 
 .media-thumbnail-card p {
@@ -1226,26 +1232,35 @@ ul {
         display: flex;
         position: absolute;
         top: 100%;
-        left: 0;
-        width: 100%;
-        margin: 0;
-        background: white;
+        left: 1.5rem;
+        right: auto;
+        margin-top: 0.5rem;
+        width: max-content;
+        max-width: calc(100% - 3rem);
+        background: #FCFCFC;
         flex-direction: column;
-        padding: 3rem 0;
-        box-shadow: 0 20px 30px rgba(0,0,0,0.1);
-        gap: 2.5rem;
+        padding: 0.5rem 0;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.15); /* Softer, wider shadow for floating effect */
+        gap: 0;
         z-index: 1001;
-        border-top: 1px solid rgba(0,0,0,0.05);
+        border: 1px solid #E2E8F0;
+        border-radius: 12px; /* Added rounded corners for the card look */
         transform: none;
     }
     
     .nav-links.active a {
-        font-size: 1rem;
+        font-size: 1.05rem;
         font-weight: 500;
         width: 100%;
         text-align: left;
-        padding-left: 2rem;
+        padding: 1.25rem 2rem;
         display: block;
+        color: var(--text-main);
+    }
+    
+    .nav-links.active a.active {
+        color: var(--accent-color);
+        font-weight: 700;
     }
     
     .nav-links.active li {
@@ -1256,11 +1271,11 @@ ul {
     .nav-links.active li:not(:last-child)::after {
         content: '';
         position: absolute;
-        bottom: -1.25rem;
-        left: 2rem; /* Align with the text padding */
-        width: calc(100% - 4rem); /* Span across but leave margin */
-        height: 2px; /* Made thicker */
-        background-color: rgba(0,0,0,0.3); /* Made darker so it's clearly visible */
+        bottom: 0;
+        left: 2rem;
+        right: 2rem;
+        height: 1px;
+        background-color: #E2E8F0;
     }
     
     .nav-links.active a::after {
@@ -1379,6 +1394,7 @@ ul {
 .car-section {
     margin-bottom: 0.75rem;
     line-height: 1.5;
+    text-align: justify;
 }
 .car-section:last-child {
     margin-bottom: 0;
