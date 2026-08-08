@@ -21,6 +21,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 100px; /* Prevents anchor links from hiding behind fixed navbar */
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 }
@@ -357,7 +358,7 @@ ul {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transform: scale(1.25) translateY(-5%); /* Zoom in more and shift up safely */
+    transform: scale(1.08) translateY(2%); /* Slight zoom and downward shift to center the torso/head and minimize gaps without cropping shoulders */
     border-radius: 0;
     border: none;
 }
