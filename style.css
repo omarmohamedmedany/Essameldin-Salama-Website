@@ -48,7 +48,8 @@ h1, h2, h3, h4 {
 }
 
 p {
-    /* Removed global justify to prevent UI breakage */
+    /* Reverted to left align to prevent huge word gaps */
+    text-align: left;
 }
 
 a {
@@ -735,7 +736,7 @@ ul {
 .about-text p {
     font-size: 1.1rem;
     color: var(--text-main);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     text-align: left;
 }
 
@@ -903,32 +904,42 @@ ul {
 
 /* C.A.R. Framework Component */
 .car-framework {
-    margin-top: 1.5rem;
-    border-top: 1px solid rgba(0,0,0,0.1);
-    padding-top: 1.5rem;
+    margin-top: 2rem;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 8px;
+    background: #ffffff;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
 }
 
 .car-toggle {
-    background: none;
+    width: 100%;
+    background: #f8fafc;
     border: none;
-    color: var(--primary-color);
-    font-weight: 600;
-    font-family: inherit;
-    font-size: 1rem;
-    cursor: pointer;
+    padding: 1.25rem 2rem;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0;
+    font-weight: 600;
+    color: var(--primary-color);
+    cursor: pointer;
     transition: var(--transition-smooth);
+    font-family: inherit;
+    font-size: 1.05rem;
+    border-bottom: 1px solid transparent;
 }
 
 .car-toggle:hover {
-    color: var(--accent-color);
+    background: #f1f5f9;
 }
 
 .car-toggle i {
     transition: transform 0.3s ease;
+    color: var(--accent-color);
+}
+
+.car-toggle.active {
+    border-bottom-color: rgba(0,0,0,0.05);
 }
 
 .car-toggle.active i {
@@ -936,17 +947,17 @@ ul {
 }
 
 .car-content {
-    display: none;
-    margin-top: 1.5rem;
-    background: var(--bg-light);
-    padding: 1.5rem;
-    border-radius: 6px;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, opacity 0.3s ease-out, padding 0.4s ease-out;
+    padding: 0 2rem;
 }
 
 .car-content.active {
-    max-height: 1000px;
+    max-height: 2000px;
     opacity: 1;
-    padding: 1rem 1.5rem 1.5rem;
+    padding: 2rem;
 }
 
 .video-cinematic {
@@ -971,6 +982,9 @@ ul {
 
 .car-section {
     margin-bottom: 1rem;
+    line-height: 1.6;
+    text-align: left;
+    color: #475569;
 }
 
 .car-section:last-child {
@@ -980,10 +994,11 @@ ul {
 .car-section strong {
     color: var(--primary-color);
     display: block;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.4rem;
     font-size: 0.95rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    font-weight: 700;
 }
 
 @keyframes fadeIn {
@@ -1327,7 +1342,7 @@ ul {
         padding: 1.5rem;
     }
     
-    /* Revert text justification on mobile to prevent huge spaces between words */
+    /* Ensure text stays left aligned on mobile */
     .about-text p, .car-section {
         text-align: left !important;
     }
@@ -1359,58 +1374,6 @@ ul {
     .stat-item { padding: 1rem; }
     .nav-actions { gap: 1rem; }
     .btn-primary { padding: 0.75rem 1rem; }
-}
-
-/* C.A.R. Framework Styling and Animation */
-.car-framework {
-    margin-top: 1.5rem;
-    border: 1px solid rgba(0,0,0,0.05);
-    border-radius: 8px;
-    background: #f8fafc;
-    overflow: hidden;
-}
-.car-toggle {
-    width: 100%;
-    background: none;
-    border: none;
-    padding: 1rem 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: 600;
-    color: var(--primary-color);
-    cursor: pointer;
-    transition: background 0.3s ease;
-    font-family: inherit;
-    font-size: 1rem;
-}
-.car-toggle:hover {
-    background: #f1f5f9;
-}
-.car-content {
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease-out, opacity 0.3s ease-out, padding 0.4s ease-out;
-    padding: 0 1.5rem;
-}
-.car-content.active {
-    max-height: 1000px;
-    opacity: 1;
-    padding: 1rem 1.5rem 1.5rem;
-}
-.car-section {
-    margin-bottom: 0.75rem;
-    line-height: 1.5;
-    text-align: left;
-}
-.car-section:last-child {
-    margin-bottom: 0;
-}
-.car-section strong {
-    color: var(--primary-color);
-    display: inline-block;
-    min-width: 90px;
 }
 
 /* Scroll Progress Bar */

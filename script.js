@@ -190,10 +190,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const typeTarget = document.querySelector('.typewriter-text');
     if (typeTarget) {
         const textArray = [
-            "Senior Strategic Advisor", 
-            "Finance Transformation Expert", 
-            "IPSAS Implementation Champion", 
-            "Mega-Project Director"
+            "Senior Executive Advisor", 
+            "Finance Leader", 
+            "Transformation Practitioner"
         ];
         let textIndex = 0;
         let charIndex = 0;
