@@ -102,16 +102,16 @@
                     <div class="form-grid">
                         <div class="form-group">
                             <label>Name *</label>
-                            <input type="text" name="Name" pattern="^[a-zA-Z\s\-\.]+$" title="Please enter a valid name (letters only)." oninput="this.value = this.value.replace(/[^a-zA-Z\s\-\.]/g, '')" required>
+                            <input type="text" name="Name" pattern="^[a-zA-Z\s\-\.]+$" title="Please enter a valid name (letters only)." oninput="this.value = this.value.replace(/[^a-zA-Z\s\-\.]/g, '')" placeholder=" " required>
                         </div>
                         <div class="form-group">
                             <label>Company *</label>
-                            <input type="text" name="Company" required>
+                            <input type="text" name="Company" placeholder=" " required>
                         </div>
                         
                         <div class="form-group">
                             <label>Country *</label>
-                            <input type="text" name="Country" pattern="^[a-zA-Z\s\-\.]+$" title="Please enter a valid country name (letters only)." oninput="this.value = this.value.replace(/[^a-zA-Z\s\-\.]/g, '')" required>
+                            <input type="text" name="Country" pattern="^[a-zA-Z\s\-\.]+$" title="Please enter a valid country name (letters only)." oninput="this.value = this.value.replace(/[^a-zA-Z\s\-\.]/g, '')" placeholder=" " required>
                         </div>
                         <div class="form-group">
                             <label>Email *</label>
@@ -302,7 +302,10 @@
                                     <option value="+260">ZMB (+260)</option>
                                     <option value="+263">ZWE (+263)</option>
                                 </select>
-                                <input id="mobileInput" type="tel" name="Mobile" pattern="^\d+$" title="Please enter a valid phone number (digits only)." placeholder="Enter mobile number" style="flex: 1;" required>
+                                <div style="position: relative; flex: 1;">
+                                    <input id="mobileInput" type="tel" name="Mobile" pattern="^\d+$" title="Please enter a valid phone number (digits only)." placeholder="Enter mobile number" style="width: 100%; box-sizing: border-box; padding-right: 40px;" required>
+                                    <i id="mobileCheck" class="fa-solid fa-circle-check" style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); color: #25D366; font-size: 1.2rem; opacity: 0; transition: opacity 0.3s ease; pointer-events: none;"></i>
+                                </div>
                             </div>
                         </div>
                         <div class="form-group">
@@ -316,7 +319,7 @@
                         </div>
                         <div class="form-group">
                             <label>Industry *</label>
-                            <input type="text" name="Industry" pattern="^[a-zA-Z\s\-\&]+$" title="Please enter a valid industry name (letters only)." oninput="this.value = this.value.replace(/[^a-zA-Z\s\-\&]/g, '')" required>
+                            <input type="text" name="Industry" pattern="^[a-zA-Z\s\-\&]+$" title="Please enter a valid industry name (letters only)." oninput="this.value = this.value.replace(/[^a-zA-Z\s\-\&]/g, '')" placeholder=" " required>
                         </div>
                     </div>
 
@@ -358,6 +361,7 @@
             const form = document.getElementById('inquiryForm');
             const countrySelect = document.getElementById('countryCodeSelect');
             const mobileInput = document.getElementById('mobileInput');
+            const mobileCheck = document.getElementById('mobileCheck');
 
             function updateMaxLength() {
                 const code = countrySelect.value;
@@ -435,6 +439,12 @@
                     val = val.substring(0, maxLen);
                 }
                 mobileInput.value = val;
+                
+                if (val.length === maxLen && val.length > 0 && maxLen !== 15) {
+                    mobileCheck.style.opacity = '1';
+                } else {
+                    mobileCheck.style.opacity = '0';
+                }
             }
 
             if (countrySelect && mobileInput) {
@@ -455,6 +465,11 @@
                         digits = digits.substring(codeDigits.length);
                     }
                     
+                    const maxLen = updateMaxLength();
+                    if (digits.length > maxLen) {
+                        digits = digits.substring(0, maxLen);
+                    }
+                    
                     e.preventDefault();
                     mobileInput.value = digits;
                     handleMobileInput();
@@ -462,7 +477,7 @@
 
                 countrySelect.addEventListener('change', () => {
                     mobileInput.value = ''; 
-                    updateMaxLength();
+                    handleMobileInput();
                     mobileInput.focus();
                 });
             }
