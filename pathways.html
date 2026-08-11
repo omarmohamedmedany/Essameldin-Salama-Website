@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essameldin Salama | Service Pathways</title>
+    <meta name="description" content="One Executive Identity. Three Service Pathways. Tailored Services and Outcomes in Finance Leadership, Transformation Advisory, and Executive Mentoring.">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Essameldin Salama | Service Pathways">
+    <meta property="og:description" content="One Executive Identity. Three Service Pathways. Tailored Services and Outcomes.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/profile.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css?v=30">
+    <style>
+        .pathways-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem auto;
+        }
+        .pathways-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        .pathway-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            border-top: 4px solid var(--primary-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        .pathway-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        .pathway-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+        .pathway-card h3 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+        .pathway-card p {
+            color: #475569;
+            flex-grow: 1;
+            margin-bottom: 2rem;
+        }
+        
+        .pathway-detail-section {
+            background: #ffffff;
+            padding: 4rem 0;
+            border-top: 1px solid #e2e8f0;
+        }
+        .pathway-detail-section:nth-of-type(even) {
+            background: #f8f9fa;
+        }
+        .pathway-detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+        }
+        @media (max-width: 992px) {
+            .pathway-detail-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .detail-sidebar h3 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        .detail-content h4 {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            margin-top: 2rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+        }
+        .detail-content h4:first-child {
+            margin-top: 0;
+        }
+        .detail-content p, .detail-content ul {
+            color: #475569;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        .detail-content ul {
+            padding-left: 1.5rem;
+        }
+        .detail-content li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="myBar"></div>
+    </div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-text">
+                    <span class="logo-name">Essameldin</span>
+                    <span class="logo-subtitle">Financial Advisor</span>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">About Me</a></li>
+                <li><a href="experience.html">Professional Experience</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="media.html">Media</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="https://www.linkedin.com/in/essameldin56/" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                <button class="menu-toggle" aria-label="Toggle Navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="section-padding" style="padding-top: 140px; background-color: #f8f9fa;">
+        <div class="container">
+            <div class="pathways-header reveal">
+                <div class="section-badge mb-3">Service Pathways</div>
+                <h1 style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 1rem;">One Executive Identity.<br>Three Service Pathways.</h1>
+                <p style="font-size: 1.15rem; color: #475569; line-height: 1.7;">The website presents one integrated executive identity through three distinct ways of engagement. Choose the pathway that aligns with your operational and strategic requirements.</p>
+            </div>
+
+            <div class="pathways-grid">
+                <div class="pathway-card reveal delay-100">
+                    <div class="pathway-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3>Executive Finance Leadership & CFO Advisory</h3>
+                    <p>For boards, CEOs, and organizations seeking decisive financial leadership and long-term capital planning.</p>
+                    <a href="#pathway-a" class="btn-primary" style="width: 100%; text-align: center; margin-top: auto;">View Pathway A</a>
+                </div>
+                <div class="pathway-card reveal delay-200">
+                    <div class="pathway-icon"><i class="fa-solid fa-gears"></i></div>
+                    <h3>Partner-Level Consulting & Transformation Advisory</h3>
+                    <p>For government entities and infrastructure projects requiring rigorous governance and systemic transformation.</p>
+                    <a href="#pathway-b" class="btn-primary" style="width: 100%; text-align: center; margin-top: auto;">View Pathway B</a>
+                </div>
+                <div class="pathway-card reveal delay-300">
+                    <div class="pathway-icon"><i class="fa-solid fa-users-viewfinder"></i></div>
+                    <h3>Executive Mentoring, Leadership Development & Practitioner Coaching</h3>
+                    <p>For emerging leaders, executives, and finance professionals seeking experience-based mentorship.</p>
+                    <a href="#pathway-c" class="btn-primary" style="width: 100%; text-align: center; margin-top: auto;">View Pathway C</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pathway A -->
+    <section id="pathway-a" class="pathway-detail-section">
+        <div class="container pathway-detail-grid">
+            <div class="detail-sidebar reveal">
+                <div class="section-badge mb-2">Pathway A</div>
+                <h3>Executive Finance Leadership & CFO Advisory</h3>
+                <p style="font-size: 1.1rem; color: #64748b; font-weight: 500; margin-bottom: 2rem;">Strategic financial leadership for complex environments.</p>
+                
+                <!-- Download Profile -->
+                <a href="assets/Pathway_1_Lead_the_Finance_Function.docx" download class="btn-secondary" style="border-color: var(--primary-color); color: var(--primary-color); display: block; text-align: center; margin-bottom: 1rem;"><i class="fa-solid fa-file-word"></i> Download Pathway Profile</a>
+            </div>
+            <div class="detail-content reveal delay-100">
+                <h4>The Value I Provide</h4>
+                <p>I establish rigorous financial governance, bridge the perilous gap between executive vision and operational reality, and provide decisive financial leadership that connects engineering progress with financial outcomes.</p>
+
+                <h4>Who I Support</h4>
+                <p>Boards, CEOs, business owners, CFOs, finance leaders, government entities, infrastructure organizations, diversified groups and family businesses.</p>
+
+                <h4>Challenges I Help Address</h4>
+                <ul>
+                    <li>Lack of reliable cash-flow visibility in complex, capital-intensive programmes.</li>
+                    <li>Disconnected business plans and multi-year budgets.</li>
+                    <li>Weak variance management converting operational data into early warnings.</li>
+                </ul>
+
+                <h4>How I Can Help</h4>
+                <p>By connecting scope, progress, commitments, contracts, costs, and risks to forecast outcomes. I develop integrated business plans and capital-deployment frameworks that ensure strict control over multi-billion-dollar investments.</p>
+
+                <h4>Expected Value & Outcomes</h4>
+                <p>Enhanced executive visibility over capital deployment, predictive financial modeling, zero-based cost justification, and a foundational shift from reactive accounting to proactive financial strategy.</p>
+
+                <h4>Relevant Experience & Credibility</h4>
+                <p>Provided financial leadership and control over cumulative project exposure exceeding US$100 billion across approximately 20 years, including flagship portfolios in Qatar and the UAE.</p>
+
+                <div style="margin-top: 3rem;">
+                    <a href="https://wa.me/97466205660" target="_blank" class="btn-primary">Discuss Your Finance Leadership Requirements</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pathway B -->
+    <section id="pathway-b" class="pathway-detail-section">
+        <div class="container pathway-detail-grid">
+            <div class="detail-sidebar reveal">
+                <div class="section-badge mb-2">Pathway B</div>
+                <h3>Partner-Level Consulting & Transformation Advisory</h3>
+                <p style="font-size: 1.1rem; color: #64748b; font-weight: 500; margin-bottom: 2rem;">Orchestrating structural alignment between strategy and execution.</p>
+                
+                <!-- Download Profile -->
+                <a href="assets/Pathway_2_Advise_and_Transform.docx" download class="btn-secondary" style="border-color: var(--primary-color); color: var(--primary-color); display: block; text-align: center; margin-bottom: 1rem;"><i class="fa-solid fa-file-word"></i> Download Pathway Profile</a>
+            </div>
+            <div class="detail-content reveal delay-100">
+                <h4>The Value I Provide</h4>
+                <p>I combine Technical PMO discipline with hands-on financial and operational experience to ensure transformations are practical, controlled, and sustainable, rather than merely theoretical.</p>
+
+                <h4>Who I Support</h4>
+                <p>Government leaders, executives, business owners, consulting firms, transformation programmes, infrastructure organizations, SMEs and family businesses.</p>
+
+                <h4>Challenges I Help Address</h4>
+                <ul>
+                    <li>Transitioning from legacy cash-based reporting to modern, IPSAS-aligned accrual practices.</li>
+                    <li>Misalignment between C-suite requirements and actual ERP systems architectures.</li>
+                    <li>Systemic bottlenecks in policies, controls, and workflows across the asset lifecycle.</li>
+                </ul>
+
+                <h4>How I Can Help</h4>
+                <p>Through Technical PMO leadership, process and operating-model redesign, and extensive super-user and Technical PMO implementation experience across Oracle and SAP environments. I translate executive and operational requirements into controlled processes, data, governance, and system-enabled outcomes.</p>
+
+                <h4>Expected Value & Outcomes</h4>
+                <p>Stronger financial governance, actionable Board-level reporting frameworks, established asset registers, and successfully adopted government costing and visualization systems.</p>
+
+                <h4>Relevant Experience & Credibility</h4>
+                <p>Technical PMO leadership supporting Qatar's pioneering public-sector implementation of IPSAS-aligned accrual accounting and enterprise transformation at Ashghal.</p>
+
+                <div style="margin-top: 3rem;">
+                    <a href="https://wa.me/97466205660" target="_blank" class="btn-primary">Discuss Your Advisory or Transformation Requirements</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pathway C -->
+    <section id="pathway-c" class="pathway-detail-section">
+        <div class="container pathway-detail-grid">
+            <div class="detail-sidebar reveal">
+                <div class="section-badge mb-2">Pathway C</div>
+                <h3>Executive Mentoring, Leadership Development & Practitioner Coaching</h3>
+                <p style="font-size: 1.1rem; color: #64748b; font-weight: 500; margin-bottom: 2rem;">Experience-based guidance for tomorrow's executive leaders.</p>
+                
+                <!-- Download Profile -->
+                <a href="assets/Pathway_3_Develop_Leaders_and_Capabilities.docx" download class="btn-secondary" style="border-color: var(--primary-color); color: var(--primary-color); display: block; text-align: center; margin-bottom: 1rem;"><i class="fa-solid fa-file-word"></i> Download Pathway Profile</a>
+            </div>
+            <div class="detail-content reveal delay-100">
+                <h4>The Value I Provide</h4>
+                <p>I draw upon over 35 years of real-world executive experience to guide professionals through real organizational challenges, career development, and implementation. This is experience-based executive mentoring and capability building, rooted in practical business realities.</p>
+
+                <h4>Who I Support</h4>
+                <p>Executives, CFOs, finance directors, emerging leaders, transformation and PMO professionals, business owners, leadership teams and high-potential talent.</p>
+
+                <h4>Challenges I Help Address</h4>
+                <ul>
+                    <li>Career stagnation in middle-management layers.</li>
+                    <li>Bridging the gap between technical finance skills and strategic executive judgment.</li>
+                    <li>Building ownership and accountability across cross-functional engineering and operational teams.</li>
+                </ul>
+
+                <h4>How I Can Help</h4>
+                <p>By providing direct, experience-based mentorship. I help individuals translate their technical competencies into C-suite financial narratives, equipping them with the professional skepticism and governance perspective required at the highest levels.</p>
+
+                <h4>Expected Value & Outcomes</h4>
+                <p>A cultivated culture of true accountability, elevated leadership capabilities within your finance and operational teams, and the sustained success of improvements driven by capable, empowered people.</p>
+
+                <h4>Relevant Experience & Credibility</h4>
+                <p>Decades of coaching operational directors and advising cross-functional teams in mega-project environments to understand the financial implications of their decisions.</p>
+
+                <div style="margin-top: 3rem;">
+                    <a href="https://wa.me/97466205660" target="_blank" class="btn-primary">Discuss Your Mentoring or Leadership-Development Needs</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Widget -->
+    <a href="https://wa.me/97466205660" target="_blank" class="whatsapp-widget">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="whatsapp-text">Let's Talk</span>
+    </a>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">Essameldin</div>
+                <div class="footer-socials">
+                    <a href="https://www.linkedin.com/in/essameldin56/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style="margin-right: 15px;"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://www.youtube.com/@essameldinsalama8179" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <p class="legal-text">
+                This site and its contents are for informational purposes only. Past performance in mega-projects or organizational transformations does not guarantee future results. Engagement terms and advisory scope are subject to formal consultation agreements.
+            </p>
+            <p class="copyright">© 2026 Essameldin. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll('.pathway-detail-section');
+            // Hide all sections initially
+            sections.forEach(sec => sec.style.display = 'none');
+
+            const buttons = document.querySelectorAll('.pathway-card .btn-primary');
+            buttons.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    
+                    // Hide all sections
+                    sections.forEach(sec => {
+                        sec.style.display = 'none';
+                        sec.classList.remove('active'); // Just in case
+                    });
+                    
+                    // Show target section
+                    const targetSec = document.querySelector(targetId);
+                    if (targetSec) {
+                        targetSec.style.display = 'block';
+                        
+                        // Re-trigger animations if applicable by adding a tiny delay
+                        setTimeout(() => {
+                            window.scrollTo({
+                                top: targetSec.offsetTop - 100, // adjust for fixed navbar
+                                behavior: 'smooth'
+                            });
+                        }, 50);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
