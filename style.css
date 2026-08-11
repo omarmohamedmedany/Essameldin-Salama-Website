@@ -1250,6 +1250,40 @@ ul {
     .hero h1 { font-size: 3rem; }
 }
 
+/* Custom Hero Buttons Alignment */
+.custom-hero-buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.5rem;
+    gap: 1rem;
+    width: 100%;
+    max-width: 500px;
+    margin-left: -1.5rem;
+}
+
+.custom-hero-buttons-top {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.custom-btn-align {
+    flex: 1;
+    padding: 1rem 1.5rem !important;
+    background: transparent !important;
+    border: 2px solid var(--primary-color) !important;
+    color: var(--primary-color) !important;
+    text-align: left !important;
+    margin: 0 !important;
+    font-weight: 600;
+}
+
+.custom-btn-align:hover {
+    background: var(--primary-color) !important;
+    color: white !important;
+}
+
 @media (max-width: 768px) {
     .section-padding { padding: 4rem 0; }
     
@@ -1297,15 +1331,16 @@ ul {
     .hero h1 { font-size: 2.5rem; }
     .hero p { font-size: 1.1rem; }
     
-    .hero-buttons {
+    .hero-buttons, .custom-hero-buttons {
         flex-direction: column;
         gap: 1rem;
         width: 100%;
+        margin-left: 0 !important;
     }
     
-    .hero-buttons a {
+    .hero-buttons a, .custom-btn-align {
         width: 100%;
-        text-align: center;
+        text-align: center !important;
     }
     
 
