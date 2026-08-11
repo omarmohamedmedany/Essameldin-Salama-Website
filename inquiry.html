@@ -37,7 +37,7 @@
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">About Me</a></li>
-                <li><a href="experience.html">Domain Experience</a></li>
+                <li><a href="experience.html">Domain Expertise</a></li>
                 <li><a href="projects.html">Career Path</a></li>
                 <li><a href="consultation.html">Consultation Path</a></li>
                 <li><a href="media.html">Media</a></li>
@@ -314,16 +314,10 @@
                         </div>
 
                         <div class="form-group">
-                            <label>Current ERP System</label>
-                            <input type="text" name="Current ERP System" placeholder="e.g. SAP, Oracle, Legacy">
-                        </div>
-                        <div class="form-group">
                             <label>Industry *</label>
                             <input type="text" name="Industry" pattern="^[a-zA-Z\s\-\&]+$" title="Please enter a valid industry name (letters only)." oninput="this.value = this.value.replace(/[^a-zA-Z\s\-\&]/g, '')" placeholder=" " required>
                         </div>
                     </div>
-
-
 
 
 
@@ -482,6 +476,24 @@
                 });
             }
 
+            // Checkbox logic
+            const selectAll = document.getElementById('selectAllPathways');
+            const pathwayCheckboxes = document.querySelectorAll('.pathway-checkbox');
+
+            if(selectAll && pathwayCheckboxes.length > 0) {
+                selectAll.addEventListener('change', (e) => {
+                    const isChecked = e.target.checked;
+                    pathwayCheckboxes.forEach(cb => cb.checked = isChecked);
+                });
+
+                pathwayCheckboxes.forEach(cb => {
+                    cb.addEventListener('change', () => {
+                        const allChecked = Array.from(pathwayCheckboxes).every(c => c.checked);
+                        selectAll.checked = allChecked;
+                    });
+                });
+            }
+
             if (form) {
                 form.addEventListener('submit', function(e) {
                     e.preventDefault();
@@ -494,8 +506,10 @@
                     const countryCode = formData.get('Country Code') || '';
                     const mobile = formData.get('Mobile') || 'N/A';
                     const orgSize = formData.get('Organization Size') || 'N/A';
-                    const erp = formData.get('Current ERP System') || 'N/A';
                     const industry = formData.get('Industry') || 'N/A';
+                    
+                    const selectedPathways = Array.from(document.querySelectorAll('.pathway-checkbox:checked'))
+                                                .map(cb => cb.value).join(', ') || 'None selected';
 
                     const subject = `New Inquiry from ${name} (${company})`;
                     let body = `Name: ${name}%0D%0A`;
@@ -504,8 +518,8 @@
                     body += `Email: ${email}%0D%0A`;
                     body += `Mobile: ${countryCode} ${mobile}%0D%0A`;
                     body += `Organization Size: ${orgSize}%0D%0A`;
-                    body += `Current ERP System: ${erp}%0D%0A`;
                     body += `Industry: ${industry}%0D%0A`;
+                    body += `Pathway Interest: ${selectedPathways}%0D%0A`;
 
                     // Open default email app
                     window.location.href = `mailto:essamslama@hotmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
