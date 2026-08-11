@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Essameldin Salama | Inquiry</title>
+    <title>Essameldin Salama | Work Together</title>
     <meta name="description" content="Contact Essameldin Salama for Executive Finance Leadership, Transformation Advisory, and Mentoring.">
     
     <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="Essameldin Salama | Inquiry">
+    <meta property="og:title" content="Essameldin Salama | Work Together">
     <meta property="og:description" content="Submit your inquiry for Executive Finance Leadership and Advisory.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="assets/profile.png">
@@ -41,7 +41,7 @@
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="consultation.html">Consultation Path</a></li>
                 <li><a href="media.html">Media</a></li>
-                <li><a href="inquiry.html" class="active">Inquiry</a></li>
+                <li><a href="inquiry.html" class="active">Work Together</a></li>
             </ul>
             <div class="nav-actions">
                 <a href="https://www.linkedin.com/in/essameldin56/" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
@@ -121,7 +121,7 @@
                         <div class="form-group">
                             <label>Mobile *</label>
                             <div style="display: flex; gap: 0.5rem;">
-                                <select name="Country Code" style="flex: 0 0 auto; width: 160px; cursor: pointer;" required>
+                                <select id="countryCodeSelect" name="Country Code" style="flex: 0 0 auto; width: 160px; cursor: pointer;" required>
                                     <option value="+974">QA (+974)</option>
                                     <option value="+971">UAE (+971)</option>
                                     <option value="+966">KSA (+966)</option>
@@ -302,7 +302,7 @@
                                     <option value="+260">ZMB (+260)</option>
                                     <option value="+263">ZWE (+263)</option>
                                 </select>
-                                <input type="tel" name="Mobile" pattern="^[\d\s\-]+$" title="Please enter a valid phone number (digits only)." placeholder="1234 5678" style="flex: 1;" oninput="this.value = this.value.replace(/[^\d\s\-]/g, '')" required>
+                                <input id="mobileInput" type="tel" name="Mobile" pattern="^\d+$" title="Please enter a valid phone number (digits only)." placeholder="Enter mobile number" style="flex: 1;" required>
                             </div>
                         </div>
                         <div class="form-group">
@@ -356,6 +356,117 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const form = document.getElementById('inquiryForm');
+            const countrySelect = document.getElementById('countryCodeSelect');
+            const mobileInput = document.getElementById('mobileInput');
+
+            function updateMaxLength() {
+                const code = countrySelect.value;
+                const exactLengths = {
+                    '+974': 8,   // QA
+                    '+971': 9,   // UAE
+                    '+966': 9,   // KSA
+                    '+20': 11,   // EG
+                    '+44': 10,   // UK
+                    '+1': 10,    // US, CA
+                    '+968': 8,   // OMN
+                    '+965': 8,   // KWT
+                    '+973': 8,   // BHR
+                    '+962': 9,   // JOR
+                    '+961': 8,   // LBN
+                    '+964': 10,  // IRQ
+                    '+212': 9,   // MAR
+                    '+213': 9,   // ALG
+                    '+216': 8,   // TUN
+                    '+218': 9,   // LBY
+                    '+249': 9,   // SDN
+                    '+967': 9,   // YEM
+                    '+970': 9,   // PSE
+                    '+963': 9,   // SYR
+                    '+90': 10,   // TUR
+                    '+98': 10,   // IRN
+                    '+92': 10,   // PAK
+                    '+91': 10,   // IND
+                    '+880': 10,  // BGD
+                    '+60': 10,   // MYS
+                    '+62': 10,   // IDN
+                    '+63': 10,   // PHL
+                    '+65': 8,    // SGP
+                    '+86': 11,   // CHN
+                    '+81': 10,   // JPN
+                    '+82': 10,   // KOR
+                    '+33': 9,    // FRA
+                    '+49': 11,   // DEU
+                    '+39': 10,   // ITA
+                    '+34': 9,    // ESP
+                    '+31': 9,    // NLD
+                    '+32': 9,    // BEL
+                    '+41': 9,    // CHE
+                    '+43': 10,   // AUT
+                    '+46': 9,    // SWE
+                    '+47': 8,    // NOR
+                    '+45': 8,    // DNK
+                    '+358': 10,  // FIN
+                    '+48': 9,    // POL
+                    '+7': 10,    // RUS/KAZ
+                    '+380': 9,   // UKR
+                    '+27': 9,    // ZAF
+                    '+234': 10,  // NGA
+                    '+254': 9,   // KEN
+                    '+61': 9,    // AUS
+                    '+64': 9,    // NZL
+                    '+55': 11,   // BRA
+                    '+54': 10,   // ARG
+                    '+52': 10,   // MEX
+                    '+57': 10,   // COL
+                    '+56': 9,    // CHL
+                    '+51': 9     // PER
+                };
+                
+                const maxLen = exactLengths[code] || 15;
+                mobileInput.maxLength = maxLen;
+                return maxLen;
+            }
+
+            function handleMobileInput() {
+                let val = mobileInput.value.replace(/[^\d]/g, '');
+                const maxLen = updateMaxLength();
+
+                if (val.length > maxLen) {
+                    val = val.substring(0, maxLen);
+                }
+                mobileInput.value = val;
+            }
+
+            if (countrySelect && mobileInput) {
+                // Initialize on load
+                updateMaxLength();
+
+                mobileInput.addEventListener('input', handleMobileInput);
+                
+                // Handle pasting natively to strip country code before truncation
+                mobileInput.addEventListener('paste', (e) => {
+                    let pasteData = (e.clipboardData || window.clipboardData).getData('text');
+                    let digits = pasteData.replace(/[^\d]/g, '');
+                    const codeDigits = countrySelect.value.replace('+', '');
+                    
+                    if (digits.startsWith('00' + codeDigits)) {
+                        digits = digits.substring(2 + codeDigits.length);
+                    } else if (digits.startsWith(codeDigits)) {
+                        digits = digits.substring(codeDigits.length);
+                    }
+                    
+                    e.preventDefault();
+                    mobileInput.value = digits;
+                    handleMobileInput();
+                });
+
+                countrySelect.addEventListener('change', () => {
+                    mobileInput.value = ''; 
+                    updateMaxLength();
+                    mobileInput.focus();
+                });
+            }
+
             if (form) {
                 form.addEventListener('submit', function(e) {
                     e.preventDefault();
