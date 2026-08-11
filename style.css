@@ -76,6 +76,11 @@ ul {
 .text-white { color: white; }
 .text-white h2, .text-white p { color: white; }
 
+/* Text Alignment Utilities */
+.text-start { text-align: left !important; }
+.text-center { text-align: center !important; }
+.text-end { text-align: right !important; }
+
 /* Buttons */
 .btn-primary {
     display: inline-block;
@@ -798,8 +803,8 @@ ul {
     border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 .trust-text {
-    font-size: 0.9rem;
-    font-weight: 600;
+    font-size: 1.15rem;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     color: var(--text-light);
@@ -808,29 +813,61 @@ ul {
     background-color: #ffffff;
     padding-bottom: 2rem;
 }
-.logo-banner {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
+/* Infinite Scroll Marquee */
+.logo-marquee-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 2rem 0;
+}
+.logo-marquee-container::before,
+.logo-marquee-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 15%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+.logo-marquee-container::before {
+    left: 0;
+    background: linear-gradient(to right, #ffffff, transparent);
+}
+.logo-marquee-container::after {
+    right: 0;
+    background: linear-gradient(to left, #ffffff, transparent);
+}
+.logo-marquee-track {
+    display: flex;
+    width: max-content;
+    animation: scroll-marquee 40s linear infinite;
+    gap: 5rem;
     align-items: center;
-    gap: 4rem 2rem;
-    max-width: 900px;
-    margin: 0 auto;
+}
+.logo-marquee-container:hover .logo-marquee-track {
+    animation-play-state: paused;
+}
+@keyframes scroll-marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-50% - 2.5rem)); }
 }
 .logo-item {
-    font-size: 1.25rem;
-    color: var(--text-light);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .client-logo {
-    max-width: 100%;
-    width: 400px;
-    height: 200px; /* Fixed height for uniform rectangular outlines */
+    height: 100px; /* Suitable for horizontal scrolling */
+    max-width: 250px;
     object-fit: contain;
     mix-blend-mode: multiply;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+}
+.client-logo:hover {
+    transform: scale(1.2);
 }
 
 .adjust-white {
@@ -1258,7 +1295,7 @@ ul {
     gap: 1rem;
     width: 100%;
     max-width: 500px;
-    margin-left: -1.5rem;
+    margin-left: 0;
 }
 
 .custom-hero-buttons-top {
