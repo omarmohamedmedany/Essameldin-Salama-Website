@@ -39,7 +39,7 @@
                 <li><a href="index.html">About Me</a></li>
                 <li><a href="experience.html">Domain Expertise</a></li>
                 <li><a href="projects.html">Career Path</a></li>
-                <li><a href="consultation.html">Consultation Path</a></li>
+                <li><a href="consultation.html">Services</a></li>
                 <li><a href="media.html">Media</a></li>
                 <li><a href="inquiry.html" class="active">Work Together</a></li>
             </ul>
@@ -319,7 +319,30 @@
                         </div>
                     </div>
 
-
+                    <div class="form-group category-group" style="padding-top: 0; margin-bottom: 1.5rem;">
+                        <label class="category-label" style="position: static; font-size: 1rem; font-weight: 700; color: var(--primary-color);">List of values</label>
+                        <p class="category-subtext">Select one, several or all values.</p>
+                        
+                        <button type="button" id="selectAllCategories" class="btn-all-categories">
+                            <span class="checkbox-square"></span>
+                            All values
+                        </button>
+                        
+                        <div class="category-grid">
+                            <label class="category-checkbox">
+                                <input type="checkbox" name="Category" value="Lead the Finance Function" class="cat-checkbox">
+                                <span>Lead the Finance Function</span>
+                            </label>
+                            <label class="category-checkbox">
+                                <input type="checkbox" name="Category" value="Advise and Transform the Organization" class="cat-checkbox">
+                                <span>Advise and Transform the Organization</span>
+                            </label>
+                            <label class="category-checkbox">
+                                <input type="checkbox" name="Category" value="Develop Leaders and Capabilities" class="cat-checkbox">
+                                <span>Develop Leaders and Capabilities</span>
+                            </label>
+                        </div>
+                    </div>
 
                     <button type="submit" class="btn-submit">Submit Inquiry <i class="fa-solid fa-paper-plane"></i></button>
                 </form>
@@ -476,20 +499,24 @@
                 });
             }
 
-            // Checkbox logic
-            const selectAll = document.getElementById('selectAllPathways');
-            const pathwayCheckboxes = document.querySelectorAll('.pathway-checkbox');
+            // Category Checkbox logic
+            const selectAllBtn = document.getElementById('selectAllCategories');
+            const catCheckboxes = document.querySelectorAll('.cat-checkbox');
 
-            if(selectAll && pathwayCheckboxes.length > 0) {
-                selectAll.addEventListener('change', (e) => {
-                    const isChecked = e.target.checked;
-                    pathwayCheckboxes.forEach(cb => cb.checked = isChecked);
+            if(selectAllBtn && catCheckboxes.length > 0) {
+                selectAllBtn.addEventListener('click', () => {
+                    const isActive = selectAllBtn.classList.toggle('active');
+                    catCheckboxes.forEach(cb => cb.checked = isActive);
                 });
 
-                pathwayCheckboxes.forEach(cb => {
+                catCheckboxes.forEach(cb => {
                     cb.addEventListener('change', () => {
-                        const allChecked = Array.from(pathwayCheckboxes).every(c => c.checked);
-                        selectAll.checked = allChecked;
+                        const allChecked = Array.from(catCheckboxes).every(c => c.checked);
+                        if(allChecked) {
+                            selectAllBtn.classList.add('active');
+                        } else {
+                            selectAllBtn.classList.remove('active');
+                        }
                     });
                 });
             }
@@ -508,7 +535,7 @@
                     const orgSize = formData.get('Organization Size') || 'N/A';
                     const industry = formData.get('Industry') || 'N/A';
                     
-                    const selectedPathways = Array.from(document.querySelectorAll('.pathway-checkbox:checked'))
+                    const selectedCategories = Array.from(document.querySelectorAll('.cat-checkbox:checked'))
                                                 .map(cb => cb.value).join(', ') || 'None selected';
 
                     const subject = `New Inquiry from ${name} (${company})`;
@@ -519,7 +546,7 @@
                     body += `Mobile: ${countryCode} ${mobile}%0D%0A`;
                     body += `Organization Size: ${orgSize}%0D%0A`;
                     body += `Industry: ${industry}%0D%0A`;
-                    body += `Pathway Interest: ${selectedPathways}%0D%0A`;
+                    body += `Category Interest: ${selectedCategories}%0D%0A`;
 
                     // Open default email app
                     window.location.href = `mailto:essamslama@hotmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
