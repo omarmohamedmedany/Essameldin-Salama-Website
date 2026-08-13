@@ -350,6 +350,33 @@
         </div>
     </section>
 
+    <!-- Page 4: Contact & Footer -->
+    <section id="contact" class="contact section-padding bg-dark text-white">
+        <div class="container text-center reveal">
+            <h2>Ready for Meaningful Transformation?</h2>
+            <p class="contact-subtitle">Let's discuss how we can solve complexity and drive performance in your organization.</p>
+            
+            <div class="contact-info mt-5">
+                <div class="info-item">
+                    <a href="tel:+97466205660" class="icon-link"><i class="fa-solid fa-phone mb-2 icon-hover"></i></a>
+                    <strong>Phone</strong>
+                    <p><a href="tel:+97466205660" style="color:inherit;text-decoration:none;">+974 66205660</a></p>
+                </div>
+                <div class="info-item">
+                    <a href="mailto:essamslama@hotmail.com" class="icon-link"><i class="fa-solid fa-envelope mb-2 icon-hover"></i></a>
+                    <strong>Email</strong>
+                    <p><a href="mailto:essamslama@hotmail.com" style="color:inherit;text-decoration:none;">essamslama@hotmail.com</a></p>
+                </div>
+                <div class="info-item">
+                    <a href="https://maps.google.com/?q=Doha,Qatar" target="_blank" class="icon-link"><i class="fa-solid fa-location-dot mb-2 icon-hover"></i></a>
+                    <strong>Location</strong>
+                    <p><a href="https://maps.google.com/?q=Doha,Qatar" target="_blank" style="color:inherit;text-decoration:none;">Doha, Qatar</a></p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
     <footer class="footer">
         <div class="container">
             <div class="footer-top">
@@ -383,81 +410,27 @@
             function updateMaxLength() {
                 const code = countrySelect.value;
                 const exactLengths = {
-                    '+974': 8,   // QA
-                    '+971': 9,   // UAE
-                    '+966': 9,   // KSA
-                    '+20': 11,   // EG
-                    '+44': 10,   // UK
-                    '+1': 10,    // US, CA
-                    '+968': 8,   // OMN
-                    '+965': 8,   // KWT
-                    '+973': 8,   // BHR
-                    '+962': 9,   // JOR
-                    '+961': 8,   // LBN
-                    '+964': 10,  // IRQ
-                    '+212': 9,   // MAR
-                    '+213': 9,   // ALG
-                    '+216': 8,   // TUN
-                    '+218': 9,   // LBY
-                    '+249': 9,   // SDN
-                    '+967': 9,   // YEM
-                    '+970': 9,   // PSE
-                    '+963': 9,   // SYR
-                    '+90': 10,   // TUR
-                    '+98': 10,   // IRN
-                    '+92': 10,   // PAK
-                    '+91': 10,   // IND
-                    '+880': 10,  // BGD
-                    '+60': 10,   // MYS
-                    '+62': 10,   // IDN
-                    '+63': 10,   // PHL
-                    '+65': 8,    // SGP
-                    '+86': 11,   // CHN
-                    '+81': 10,   // JPN
-                    '+82': 10,   // KOR
-                    '+33': 9,    // FRA
-                    '+49': 11,   // DEU
-                    '+39': 10,   // ITA
-                    '+34': 9,    // ESP
-                    '+31': 9,    // NLD
-                    '+32': 9,    // BEL
-                    '+41': 9,    // CHE
-                    '+43': 10,   // AUT
-                    '+46': 9,    // SWE
-                    '+47': 8,    // NOR
-                    '+45': 8,    // DNK
-                    '+358': 10,  // FIN
-                    '+48': 9,    // POL
-                    '+7': 10,    // RUS/KAZ
-                    '+380': 9,   // UKR
-                    '+27': 9,    // ZAF
-                    '+234': 10,  // NGA
-                    '+254': 9,   // KEN
-                    '+61': 9,    // AUS
-                    '+64': 9,    // NZL
-                    '+55': 11,   // BRA
-                    '+54': 10,   // ARG
-                    '+52': 10,   // MEX
-                    '+57': 10,   // COL
-                    '+56': 9,    // CHL
-                    '+51': 9     // PER
+                    '+93': 9, '+355': 9, '+213': 9, '+376': 6, '+244': 9, '+1': 10, '+54': 10, '+374': 8, '+61': 9, '+43': 10, '+994': 9, '+973': 8, '+880': 10, '+375': 9, '+32': 9, '+501': 7, '+229': 8, '+975': 8, '+591': 8, '+387': 8, '+267': 8, '+55': [10, 11], '+673': 7, '+359': [8, 9], '+226': 8, '+257': 8, '+238': 7, '+855': [8, 9], '+237': 9, '+236': 8, '+235': 8, '+56': 9, '+86': 11, '+57': 10, '+269': 7, '+243': 9, '+242': 9, '+506': 8, '+385': 9, '+53': 8, '+357': 8, '+420': 9, '+45': 8, '+253': 8, '+670': 8, '+593': 9, '+20': 10, '+503': 8, '+240': 9, '+291': 7, '+372': [7, 8], '+268': 8, '+251': 9, '+679': 7, '+358': [5, 12], '+33': 9, '+241': 8, '+220': 7, '+995': 9, '+49': [10, 11], '+233': 9, '+30': 10, '+502': 8, '+224': 9, '+245': 7, '+592': 7, '+509': 8, '+504': 8, '+36': 9, '+354': 7, '+91': 10, '+62': [9, 12], '+98': 10, '+964': 10, '+353': 9, '+972': 9, '+39': [9, 10], '+225': 10, '+81': 10, '+962': 9, '+7': 10, '+254': 9, '+686': 5, '+965': 8, '+996': 9, '+856': [8, 10], '+371': 8, '+961': [7, 8], '+266': 8, '+231': 9, '+218': 9, '+423': [7, 9], '+370': 8, '+352': 9, '+261': 9, '+265': 9, '+60': [9, 10], '+960': 7, '+223': 8, '+356': 8, '+692': 7, '+222': 8, '+230': 8, '+52': 10, '+691': 7, '+373': 8, '+377': 8, '+976': 8, '+382': 8, '+212': 9, '+258': 9, '+95': 9, '+264': 9, '+674': 7, '+977': 10, '+31': 9, '+64': [8, 9], '+505': 8, '+227': 8, '+234': 10, '+850': [8, 10], '+389': 8, '+47': 8, '+968': 8, '+92': 10, '+680': 7, '+970': 9, '+507': 8, '+595': 9, '+51': 9, '+63': 10, '+48': 9, '+351': 9, '+1787': 10, '+40': 9, '+250': 9, '+685': 7, '+378': [6, 10], '+239': 7, '+221': 9, '+381': 9, '+248': 7, '+232': 8, '+65': 8, '+421': 9, '+386': 8, '+677': 7, '+252': 8, '+27': 9, '+82': [9, 10], '+211': 9, '+34': 9, '+94': 9, '+249': 9, '+597': 7, '+46': 9, '+41': 9, '+963': 9, '+886': 9, '+992': 9, '+255': 9, '+66': 9, '+228': 8, '+676': 5, '+1868': 10, '+216': 8, '+90': 10, '+993': 8, '+688': 5, '+256': 9, '+380': 9, '+598': 8, '+998': 9, '+58': 10, '+84': [9, 10], '+967': 9, '+260': 9, '+263': 9, '+974': 8, '+971': 9, '+966': 9, '+44': 10
                 };
                 
-                const maxLen = exactLengths[code] || 15;
+                const rule = exactLengths[code] || 15;
+                const maxLen = Array.isArray(rule) ? rule[1] : rule;
                 mobileInput.maxLength = maxLen;
-                return maxLen;
+                return rule;
             }
 
             function handleMobileInput() {
                 let val = mobileInput.value.replace(/[^\d]/g, '');
-                const maxLen = updateMaxLength();
+                const rule = updateMaxLength();
+                const maxLen = Array.isArray(rule) ? rule[1] : rule;
+                const minLen = Array.isArray(rule) ? rule[0] : rule;
 
                 if (val.length > maxLen) {
                     val = val.substring(0, maxLen);
                 }
                 mobileInput.value = val;
                 
-                if (val.length === maxLen && val.length > 0 && maxLen !== 15) {
+                if (val.length >= minLen && val.length <= maxLen && val.length > 0 && maxLen !== 15) {
                     mobileCheck.style.opacity = '1';
                 } else {
                     mobileCheck.style.opacity = '0';
@@ -539,17 +512,17 @@
                                                 .map(cb => cb.value).join(', ') || 'None selected';
 
                     const subject = `New Inquiry from ${name} (${company})`;
-                    let body = `Name: ${name}%0D%0A`;
-                    body += `Company: ${company}%0D%0A`;
-                    body += `Country: ${country}%0D%0A`;
-                    body += `Email: ${email}%0D%0A`;
-                    body += `Mobile: ${countryCode} ${mobile}%0D%0A`;
-                    body += `Organization Size: ${orgSize}%0D%0A`;
-                    body += `Industry: ${industry}%0D%0A`;
-                    body += `Category Interest: ${selectedCategories}%0D%0A`;
+                    let bodyRaw = `Name: ${name}\n`;
+                    bodyRaw += `Company: ${company}\n`;
+                    bodyRaw += `Country: ${country}\n`;
+                    bodyRaw += `Email: ${email}\n`;
+                    bodyRaw += `Mobile: ${countryCode} ${mobile}\n`;
+                    bodyRaw += `Organization Size: ${orgSize}\n`;
+                    bodyRaw += `Industry: ${industry}\n`;
+                    bodyRaw += `Services Pathways: ${selectedCategories}\n`;
 
                     // Open default email app
-                    window.location.href = `mailto:essamslama@hotmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+                    window.location.href = `mailto:essamslama@hotmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyRaw)}`;
                 });
             }
         });
