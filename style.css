@@ -1621,6 +1621,8 @@ body.dark-mode-forced .client-logo {
     font-size: 1.1rem;
     color: var(--text-main);
     font-weight: 500;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 /* Inquiry Form Styles */
