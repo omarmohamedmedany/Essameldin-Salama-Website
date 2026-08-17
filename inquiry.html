@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; script-src 'self' 'unsafe-inline' https://api.web3forms.com; connect-src 'self' https://api.web3forms.com;">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Essameldin Salama | Work Together</title>
@@ -21,8 +22,8 @@
     <!-- FontAwesome for Icons (Deferred) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     
-    <link rel="stylesheet" href="style.css?v=32">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css?v=39">
+    <script src="script.js?v=4" defer></script>
     
 </head>
 <body>
@@ -107,15 +108,8 @@
                 <h2>Tell us what you need</h2>
                 <p class="form-subtext">Complete every field so we can provide actionable executive advice.</p>
                 
-                <form action="https://api.web3forms.com/submit" method="POST" id="inquiryForm" class="inquiry-form">
+                <form class="inquiry-form" id="inquiryForm">
                     
-                    <!-- Web3Forms Access Key (Replace with your actual key) -->
-                    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
-                    <!-- Subject for the email -->
-                    <input type="hidden" name="subject" value="New Inquiry via Essameldin Website">
-                    <!-- Redirect to homepage after submission -->
-                    <input type="hidden" name="redirect" value="https://web3forms.com/success">
-
                     <div class="form-grid">
                         <div class="form-group">
                             <label>Name *</label>
@@ -137,8 +131,8 @@
 
                         <div class="form-group">
                             <label>Mobile *</label>
-                            <div style="display: flex; gap: 0.5rem;">
-                                <select id="countryCodeSelect" name="Country Code" style="flex: 0 0 auto; width: 160px; cursor: pointer;" required>
+                            <div class="inquiry-phone-wrapper">
+                                <select id="countryCodeSelect" name="Country Code" class="inquiry-country-select" required>
                                     <option value="+974">QA (+974)</option>
                                     <option value="+971">UAE (+971)</option>
                                     <option value="+966">KSA (+966)</option>
@@ -319,9 +313,9 @@
                                     <option value="+260">ZMB (+260)</option>
                                     <option value="+263">ZWE (+263)</option>
                                 </select>
-                                <div style="position: relative; flex: 1;">
-                                    <input id="mobileInput" type="tel" name="Mobile" pattern="^\d+$" title="Please enter a valid phone number (digits only)." placeholder="Enter mobile number" style="width: 100%; box-sizing: border-box; padding-right: 40px;" required>
-                                    <i id="mobileCheck" class="fa-solid fa-circle-check" style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); color: #25D366; font-size: 1.2rem; opacity: 0; transition: opacity 0.3s ease; pointer-events: none;"></i>
+                                <div class="inquiry-mobile-wrapper">
+                                    <input id="mobileInput" type="tel" name="Mobile" pattern="^\d+$" title="Please enter a valid phone number (digits only)." placeholder="Enter mobile number" class="inquiry-mobile-input" required>
+                                    <i id="mobileCheck" class="fa-solid fa-circle-check inquiry-mobile-check"></i>
                                 </div>
                             </div>
                         </div>
@@ -336,8 +330,8 @@
                         </div>
                     </div>
 
-                    <div class="form-group category-group" style="padding-top: 0; margin-bottom: 1.5rem;">
-                        <label class="category-label" style="position: static; font-size: 1rem; font-weight: 700; color: var(--primary-color);">Services Pathways</label>
+                    <div class="form-group category-group">
+                        <label class="category-label">Services Pathways</label>
                         <p class="category-subtext">Select one, several or all pathways.</p>
                         
                         <button type="button" id="selectAllCategories" class="btn-all-categories">
@@ -377,17 +371,17 @@
                 <div class="info-item">
                     <a href="tel:+97466205660" class="icon-link"><i class="fa-solid fa-phone mb-2 icon-hover"></i></a>
                     <strong>Phone</strong>
-                    <p><a href="tel:+97466205660" style="color:inherit;text-decoration:none;">+974 66205660</a></p>
+                    <p><a href="tel:+97466205660" class="contact-link">+974 66205660</a></p>
                 </div>
                 <div class="info-item">
                     <a href="mailto:essamslama@hotmail.com" class="icon-link"><i class="fa-solid fa-envelope mb-2 icon-hover"></i></a>
                     <strong>Email</strong>
-                    <p><a href="mailto:essamslama@hotmail.com" style="color:inherit;text-decoration:none;">essamslama@hotmail.com</a></p>
+                    <p><a href="mailto:essamslama@hotmail.com" class="contact-link">essamslama@hotmail.com</a></p>
                 </div>
                 <div class="info-item">
                     <a href="https://maps.google.com/?q=Doha,Qatar" target="_blank" class="icon-link"><i class="fa-solid fa-location-dot mb-2 icon-hover"></i></a>
                     <strong>Location</strong>
-                    <p><a href="https://maps.google.com/?q=Doha,Qatar" target="_blank" style="color:inherit;text-decoration:none;">Doha, Qatar</a></p>
+                    <p><a href="https://maps.google.com/?q=Doha,Qatar" target="_blank" class="contact-link">Doha, Qatar</a></p>
                 </div>
             </div>
             
@@ -399,7 +393,7 @@
             <div class="footer-top">
                 <div class="footer-logo">Essameldin</div>
                 <div class="footer-socials">
-                    <a href="https://www.linkedin.com/in/essameldin56/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style="margin-right: 15px;"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://www.linkedin.com/in/essameldin56/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="footer-social-link"><i class="fa-brands fa-linkedin-in"></i></a>
                     <a href="https://www.youtube.com/@essameldinsalama8179" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
                 </div>
             </div>

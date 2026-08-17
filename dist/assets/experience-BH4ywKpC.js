@@ -1,1 +1,0 @@
-import{t as e}from"./script-B0IlTAsr.js";e();

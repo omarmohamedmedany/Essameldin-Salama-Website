@@ -217,4 +217,56 @@ document.addEventListener("DOMContentLoaded", () => {
 
         setTimeout(type, 1000);
     }
+    
+    // -----------------------------------------
+    // Form Mailto Submission Handler
+    // -----------------------------------------
+    const inquiryForm = document.getElementById('inquiryForm');
+    if (inquiryForm) {
+        inquiryForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const name = formData.get('Name') || '';
+            const company = formData.get('Company') || '';
+            const country = formData.get('Country') || '';
+            const email = formData.get('Email') || '';
+            const countryCode = formData.get('Country Code') || '';
+            const mobileNum = formData.get('Mobile') || '';
+            const orgSize = formData.get('Organization Size') || '';
+            const industry = formData.get('Industry') || '';
+            
+            const mobile = `${countryCode} ${mobileNum}`.trim();
+            
+            let body = `Dear Mr. Essam,\n\n`;
+            body += `I am writing to inquire about your Executive Advisory Services. `;
+            body += `My name is ${name} from ${company}, operating in the ${industry} sector in ${country}.`;
+            
+            if (orgSize) {
+                body += ` Our organization size is approximately ${orgSize}.\n\n`;
+            } else {
+                body += `\n\n`;
+            }
+            
+            const categories = formData.getAll('Category');
+            if (categories.length > 0) {
+                body += `The services I am interested in are:\n`;
+                categories.forEach(cat => {
+                    body += `- ${cat}\n`;
+                });
+                body += `\n`;
+            }
+            
+            body += `You can reach me directly at ${mobile} or via email at ${email}.\n\n`;
+            body += `Looking forward to hearing from you soon.\n\n`;
+            body += `Best regards,\n${name}`;
+            
+            // Encode for mailto link
+            const encodedBody = encodeURIComponent(body);
+            const encodedSubject = encodeURIComponent(`New Inquiry from ${name}`);
+            
+            // Open the default email client
+            window.location.href = `mailto:essamslama@hotmail.com?subject=${encodedSubject}&body=${encodedBody}`;
+        });
+    }
 });

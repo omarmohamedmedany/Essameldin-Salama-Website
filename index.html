@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; script-src 'self' 'unsafe-inline' https://api.web3forms.com; connect-src 'self' https://api.web3forms.com;">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Essameldin Salama | Trusted Executive Advisor</title>
@@ -12,6 +13,9 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="assets/profile.png">
     
+    <!-- Preload Critical Assets -->
+    <link rel="preload" as="image" href="assets/profile.png">
+    
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     
@@ -21,7 +25,7 @@
     <!-- FontAwesome for Icons (Deferred) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     
-    <link rel="stylesheet" href="style.css?v=28">
+    <link rel="stylesheet" href="style.css?v=34">
     <script src="script.js" defer></script>
     <script type="application/ld+json">
     {
