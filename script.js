@@ -85,15 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Form submission
-    const contactForm = document.getElementById("contactForm");
-    if (contactForm) {
-        contactForm.addEventListener("submit", (e) => {
-            e.preventDefault();
-            alert("Thank you for your inquiry. A member of our executive team will contact you shortly.");
-            contactForm.reset();
-        });
-    }
+    // Form submission handled natively by Web3Forms action attribute in inquiry.html
 
     // Mobile Navigation Toggle
     const menuToggle = document.querySelector(".menu-toggle");
