@@ -18,8 +18,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- FontAwesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- FontAwesome for Icons (Deferred) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     
     <link rel="stylesheet" href="style.css?v=4">
     <!-- Schema.org Markup -->
@@ -70,7 +70,7 @@
     </nav>
 
     <!-- Professional Experience Section -->
-    <section id="expertise" class="services section-padding" style="padding-top: 140px; background-color: #f8f9fa;">
+    <section id="expertise" class="services section-padding section-hero-padded bg-light">
         <div class="container">
             <div class="section-badge mb-3">Areas of Impact</div>
             <h2 class="section-title reveal text-start mb-4">Domain Expertise</h2>
@@ -147,9 +147,9 @@
                     <p><a href="tel:+97466205660" style="color:inherit;text-decoration:none;">+974 66205660</a></p>
                 </div>
                 <div class="info-item">
-                    <a href="mailto:essamslama@hotmail.com" class="icon-link"><i class="fa-solid fa-envelope mb-2 icon-hover"></i></a>
+                    <a href="#" class="icon-link email-obfuscate" data-user="essamslama" data-domain="hotmail.com"><i class="fa-solid fa-envelope mb-2 icon-hover"></i></a>
                     <strong>Email</strong>
-                    <p><a href="mailto:essamslama@hotmail.com" style="color:inherit;text-decoration:none;">essamslama@hotmail.com</a></p>
+                    <p><a href="#" class="email-obfuscate" data-user="essamslama" data-domain="hotmail.com" style="color:inherit;text-decoration:none;">Email Me</a></p>
                 </div>
                 <div class="info-item">
                     <a href="https://maps.google.com/?q=Doha,Qatar" target="_blank" class="icon-link"><i class="fa-solid fa-location-dot mb-2 icon-hover"></i></a>
@@ -184,25 +184,5 @@
     </a>
 
     <script src="script.js"></script>
-    
-    <!-- Schema.org Markup for Executive Profile -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Essameldin Abdelhamid Salama",
-      "jobTitle": "Senior Executive Advisor | Finance Leader | Transformation Practitioner",
-      "url": "https://essameldinsalama.com",
-      "sameAs": [
-        "https://www.linkedin.com/in/essameldin56/"
-      ],
-      "alumniOf": {
-        "@type": "CollegeOrUniversity",
-        "name": "Alexandria University"
-      },
-      "knowsAbout": ["Finance Transformation", "Strategic Planning", "Governance", "Capital Programs"]
-    }
-    </script>
-
 </body>
 </html>

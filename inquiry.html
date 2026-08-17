@@ -18,8 +18,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- FontAwesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- FontAwesome for Icons (Deferred) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     
     <link rel="stylesheet" href="style.css?v=32">
 </head>
@@ -57,7 +57,7 @@
         <!-- Left Side: Contact Info -->
         <div class="inquiry-left">
             <div class="inquiry-left-content reveal">
-                <h1 class="inquiry-title">Let's Discuss<br><span style="color: var(--accent-color);">Your Future</span></h1>
+                <h1 class="inquiry-title">Let's Discuss<br><span class="text-accent">Your Future</span></h1>
                 <p class="inquiry-subtitle">Share your organizational challenges, strategic goals, and current setup. We will help shape the next step.</p>
                 
                 <div class="contact-list">
@@ -73,7 +73,7 @@
                         <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
                         <div class="contact-details">
                             <span class="contact-label">Email</span>
-                            <span class="contact-value">essamslama@hotmail.com</span>
+                            <span class="contact-value"><a href="#" class="email-obfuscate" data-user="essamslama" data-domain="hotmail.com" style="color:inherit;text-decoration:none;">Email Me</a></span>
                         </div>
                     </div>
 

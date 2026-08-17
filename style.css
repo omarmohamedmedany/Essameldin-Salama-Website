@@ -363,7 +363,6 @@ ul {
     width: 100%;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
-    border: 4px solid #808080; /* Grey outline */
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     overflow: hidden;
     margin-top: 3.5rem; /* Pushes the image down slightly from the absolute top to find the visual center */
@@ -373,7 +372,6 @@ ul {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transform: scale(1.08) translateY(2%); /* Slight zoom and downward shift to center the torso/head and minimize gaps without cropping shoulders */
     border-radius: 0;
     border: none;
 }
@@ -1418,6 +1416,23 @@ ul {
     .about-text p, .car-section {
         text-align: left !important;
     }
+
+    /* Inquiry Page Responsive */
+    .inquiry-section {
+        flex-direction: column;
+    }
+    .inquiry-left, .inquiry-right {
+        padding: 4rem 1.5rem;
+    }
+    .inquiry-title {
+        font-size: 2.5rem;
+    }
+    .inquiry-right-content h2 {
+        font-size: 2rem;
+    }
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1986,30 +2001,207 @@ body.dark-mode-forced .client-logo {
 .inquiry-form .form-group:has(textarea:focus) label,
 .inquiry-form .form-group:has(select:focus) label,
 .inquiry-form .form-group:has(input:not(:placeholder-shown)) label,
-.inquiry-form .form-group:has(textarea:not(:placeholder-shown)) label {
-    top: 0;
-    left: 0.2rem;
-    font-size: 0.85rem;
-    color: var(--accent-color);
-    font-weight: 700;
-}
-/* For the mobile field which has a flex container */
+.inquiry-form .form-group:has(textarea:not(:placeholder-shown)) label,
 .inquiry-form .form-group:has(#countryCodeSelect) label {
     top: 0;
     left: 0.2rem;
     font-size: 0.85rem;
-    color: var(--accent-color);
     font-weight: 700;
 }
 
+/* Apply blue accent color ONLY when focused */
+.inquiry-form .form-group:has(input:focus) label,
+.inquiry-form .form-group:has(textarea:focus) label,
+.inquiry-form .form-group:has(select:focus) label {
+    color: var(--accent-color);
+}
+
+/* -----------------------------------------
+   Semantic Classes for Refactoring
+   ----------------------------------------- */
+
+/* Utility / Structural */
+.section-hero-padded {
+    padding-top: 140px;
+}
+
+.bg-light-padded {
+    background-color: var(--bg-light);
+    padding: 2rem 0;
+}
+
+.list-plain {
+    list-style: none;
+    padding: 0;
+}
+
+.logo-greyscale-contrast {
+    mix-blend-mode: normal !important;
+    filter: grayscale(1) contrast(5) brightness(2) !important;
+}
+
+/* Typography / Badges */
+.badge-blue {
+    background: #DBEAFE;
+    color: #2563EB;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+}
+
+.section-title-dark {
+    color: #0F172A;
+    font-weight: 700;
+    font-size: 2.25rem;
+    letter-spacing: -0.5px;
+}
+
+.text-primary-margin {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.accordion-header-dark {
+    color: #1E293B;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* Pages Specific Layouts */
+.consultation-hero {
+    padding-top: 140px;
+    background-color: var(--bg-light);
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.pathway-card-flex {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.btn-block-bottom {
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+}
+
+.projects-hero-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-top: 3rem;
+}
+
+.project-category-card {
+    background: white;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+@media (max-width: 1200px) {
+    .projects-hero-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-hero-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* Media Page Specific */
+.media-hero-padded {
+    padding-top: 140px;
+    min-height: 80vh;
+}
+.badge-red {
+    background: rgba(255,0,0,0.1);
+    color: #FF0000;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+}
+.title-large-white {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+.subtitle-light-transparent {
+    color: #F8FAFC;
+    font-size: 1.15rem;
+    max-width: 800px;
+    margin: 1.5rem auto 0 auto;
+    line-height: 1.8;
+}
+.flex-center-gap {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.flex-center-gap .btn-youtube {
+    min-width: 280px;
+    justify-content: center;
+}
+.bg-blue-primary {
+    background-color: #2563eb;
+}
+.text-accent {
+    color: var(--accent-color);
+}
+
 /* Hide placeholders until focused */
+.inquiry-form .form-group input::-webkit-input-placeholder,
+.inquiry-form .form-group textarea::-webkit-input-placeholder {
+    opacity: 0 !important;
+    color: transparent !important;
+    transition: opacity 0.3s ease, color 0.3s ease;
+}
+.inquiry-form .form-group input::-moz-placeholder,
+.inquiry-form .form-group textarea::-moz-placeholder {
+    opacity: 0 !important;
+    color: transparent !important;
+    transition: opacity 0.3s ease, color 0.3s ease;
+}
 .inquiry-form .form-group input::placeholder,
 .inquiry-form .form-group textarea::placeholder {
-    color: transparent;
-    transition: color 0.3s ease;
+    opacity: 0 !important;
+    color: transparent !important;
+    transition: opacity 0.3s ease, color 0.3s ease;
+}
+.inquiry-form .form-group input:focus::-webkit-input-placeholder,
+.inquiry-form .form-group textarea:focus::-webkit-input-placeholder {
+    opacity: 1 !important;
+    color: #94a3b8 !important;
+}
+.inquiry-form .form-group input:focus::-moz-placeholder,
+.inquiry-form .form-group textarea:focus::-moz-placeholder {
+    opacity: 1 !important;
+    color: #94a3b8 !important;
 }
 .inquiry-form .form-group input:focus::placeholder,
 .inquiry-form .form-group textarea:focus::placeholder {
-    color: #ccc;
+    opacity: 1 !important;
+    color: #94a3b8 !important;
 }
-

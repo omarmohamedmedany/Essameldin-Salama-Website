@@ -18,8 +18,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- FontAwesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- FontAwesome for Icons (Deferred) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     
     <link rel="stylesheet" href="style.css?v=28">
     <!-- Schema.org Markup -->
@@ -32,11 +32,19 @@
       "description": "Trusted Executive Advisor specializing in Finance, Transformation, Strategic Performance, and Insight-Led Decisions.",
       "alumniOf": [
         {
+          "@type": "CollegeOrUniversity",
+          "name": "Alexandria University"
+        },
+        {
           "@type": "Organization",
           "name": "Arthur Andersen"
         }
       ],
-      "url": "https://essameldin-salama-website.onrender.com/"
+      "knowsAbout": ["Finance Transformation", "Strategic Planning", "Governance", "Capital Programs"],
+      "url": "https://essameldin-salama-website.onrender.com/",
+      "sameAs": [
+        "https://www.linkedin.com/in/essameldin56/"
+      ]
     }
     </script>
 </head>
@@ -70,25 +78,29 @@
     </nav>
 
     <!-- Page 1: About Me (Replaced Hero) -->
-    <section id="about" class="about section-padding" style="padding-top: 140px;">
+    <section id="about" class="about section-padding section-hero-padded">
         <div class="container about-grid">
             <div class="about-image reveal">
                 <picture>
                     <source srcset="assets/profile.png" type="image/webp">
-                    <img src="C:/Users/Administrator/.gemini/antigravity/brain/9409f6e6-fbce-4ffd-96c0-75ba7b6c6532/.user_uploaded/media_1786029169885.png" alt="Essameldin Salama" loading="lazy" width="600" height="600">
+                    <img src="assets/profile.png" alt="Essameldin Salama" loading="lazy" width="600" height="600">
                 </picture>
             </div>
             <div class="about-text reveal">
                 <div class="section-badge">Executive Profile</div>
                 <h2>Essameldin Abdelhamid Salama</h2>
                 <h3 class="credentials"><span class="typewriter-text"></span><span class="typewriter-cursor">|</span></h3>
-                <p>I help organizations, leaders, and ambitious professionals solve complexity, improve performance, and achieve meaningful transformation through practical executive experience, strategic thinking, and disciplined execution.</p>
-                <p>With over 34 years of multi-market experience across the Gulf and Egypt, my background includes supporting major organizations in government, infrastructure, ports, and petroleum operations—where decisions carry real operational and financial impact.</p>
-                <p>I am best engaged when the challenge is serious, complexity is high, and results matter. I am also passionate about helping middle managers break career stagnation and rise toward senior executive roles.</p>
+                <p><strong>I help organizations, leaders, and ambitious professionals solve complexity and achieve meaningful transformation.</strong></p>
+                <ul style="list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem;">
+                    <li><strong>34+ Years Experience:</strong> Multi-market expertise across the Gulf and Egypt.</li>
+                    <li><strong>Industry Focus:</strong> Government, infrastructure, ports, and petroleum operations.</li>
+                    <li><strong>Leadership Development:</strong> Passionate about helping middle managers break career stagnation.</li>
+                </ul>
+                <p>I am best engaged when the challenge is serious, complexity is high, and results matter.</p>
                 
                 <div class="education-block mt-4">
                     <h4>Education</h4>
-                    <ul class="education-list" style="list-style: none; padding: 0;">
+                    <ul class="education-list list-plain">
                         <li class="education-item">
                             <img src="assets/Woolf University.png" class="edu-logo" alt="Woolf University">
                             <span><strong>MBA</strong> – Woolf University (April 2026) <a href="https://woolf.university" target="_blank" rel="noopener noreferrer" class="edu-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></span>
@@ -138,7 +150,7 @@
     </section>
 
     <!-- Trusted By Logo Banner (NEW) -->
-    <div class="logo-banner-section" style="background-color: #ffffff; padding: 2rem 0;">
+    <div class="logo-banner-section bg-light-padded" style="background-color: #ffffff;">
         <div class="container text-center">
             <p class="trust-text mb-4">Trusted by leading organizations across the region</p>
             <div class="logo-marquee-container reveal delay-100">
@@ -168,8 +180,8 @@
     <!-- Testimonials Section -->
     <section class="testimonials section-padding bg-light">
         <div class="container text-center">
-            <div class="section-badge mb-4" style="background: #E0E7FF; color: #4338CA; font-weight: 700; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; display: inline-block;">Testimonials</div>
-            <h2 class="section-title reveal mb-5" style="color: #0F172A; font-weight: 700; font-size: 2.25rem; letter-spacing: -0.5px;">What Leaders Say</h2>
+            <div class="section-badge mb-4 badge-blue">Testimonials</div>
+            <h2 class="section-title reveal mb-5 section-title-dark">What Leaders Say</h2>
             
             <div class="testimonial-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 900px; margin: 0 auto;">
                 <div class="testimonial-card reveal" style="background: white; padding: 2.5rem; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.06); text-align: left; border-top: 4px solid var(--accent-color);">
@@ -194,16 +206,16 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="faq section-padding" style="background-color: white;">
+    <section class="faq section-padding bg-light-padded">
         <div class="container mx-auto" style="max-width: 800px; padding: 0 1rem;">
             <div style="text-align: center;">
-                <div class="section-badge mb-4" style="background: #DBEAFE; color: #2563EB; font-weight: 700; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; display: inline-block;">Clarity</div>
+                <div class="section-badge mb-4 badge-blue">Clarity</div>
             </div>
-            <h2 class="section-title reveal text-center mb-5" style="color: #0F172A; font-weight: 700; font-size: 2.25rem; letter-spacing: -0.5px;">Frequently Asked Questions</h2>
+            <h2 class="section-title reveal text-center mb-5 section-title-dark">Frequently Asked Questions</h2>
             
             <div class="accordion-container">
                 <div class="accordion-item reveal">
-                    <button class="accordion-header" style="color: #1E293B; font-weight: 600; font-size: 1.1rem;">
+                    <button class="accordion-header accordion-header-dark">
                         What types of organizations do you typically advise?
                         <i class="fa-solid fa-chevron-down accordion-icon" style="color: #2563EB; font-size: 1rem;"></i>
                     </button>
@@ -213,7 +225,7 @@
                 </div>
                 
                 <div class="accordion-item reveal delay-100">
-                    <button class="accordion-header" style="color: #1E293B; font-weight: 600; font-size: 1.1rem;">
+                    <button class="accordion-header accordion-header-dark">
                         Do you handle ERP implementation directly?
                         <i class="fa-solid fa-chevron-down accordion-icon" style="color: #2563EB; font-size: 1rem;"></i>
                     </button>
@@ -223,7 +235,7 @@
                 </div>
                 
                 <div class="accordion-item reveal delay-200">
-                    <button class="accordion-header" style="color: #1E293B; font-weight: 600; font-size: 1.1rem;">
+                    <button class="accordion-header accordion-header-dark">
                         How do you approach finance transformation?
                         <i class="fa-solid fa-chevron-down accordion-icon" style="color: #2563EB; font-size: 1rem;"></i>
                     </button>
@@ -248,9 +260,9 @@
                     <p><a href="tel:+97466205660" style="color:inherit;text-decoration:none;">+974 66205660</a></p>
                 </div>
                 <div class="info-item">
-                    <a href="mailto:essamslama@hotmail.com" class="icon-link"><i class="fa-solid fa-envelope mb-2 icon-hover"></i></a>
+                    <a href="#" class="icon-link email-obfuscate" data-user="essamslama" data-domain="hotmail.com"><i class="fa-solid fa-envelope mb-2 icon-hover"></i></a>
                     <strong>Email</strong>
-                    <p><a href="mailto:essamslama@hotmail.com" style="color:inherit;text-decoration:none;">essamslama@hotmail.com</a></p>
+                    <p><a href="#" class="email-obfuscate" data-user="essamslama" data-domain="hotmail.com" style="color:inherit;text-decoration:none;">Email Me</a></p>
                 </div>
                 <div class="info-item">
                     <a href="https://maps.google.com/?q=Doha,Qatar" target="_blank" class="icon-link"><i class="fa-solid fa-location-dot mb-2 icon-hover"></i></a>
@@ -285,49 +297,5 @@
     </a>
 
     <script src="script.js"></script>
-    
-    <!-- Schema.org Markup for Executive Profile -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Essameldin Abdelhamid Salama",
-      "jobTitle": "Senior Executive Advisor | Finance Leader | Transformation Practitioner",
-      "url": "https://essameldinsalama.com",
-      "sameAs": [
-        "https://www.linkedin.com/in/essameldin56/"
-      ],
-      "alumniOf": {
-        "@type": "CollegeOrUniversity",
-        "name": "Alexandria University"
-      },
-      "knowsAbout": ["Finance Transformation", "Strategic Planning", "Governance", "Capital Programs"]
-    }
-    </script>
-    <script>
-        // Detect if a dark mode extension (like Dark Reader) is forcing the body to be dark
-        function checkForcedDarkMode() {
-            function isDark(element) {
-                if (!element) return false;
-                var bgColor = window.getComputedStyle(element).backgroundColor;
-                var rgba = bgColor.match(/[\d.]+/g);
-                if (!rgba || rgba.length < 3) return false;
-                if (rgba.length === 4 && parseFloat(rgba[3]) === 0) return false; // Ignore transparent
-                var brightness = (parseInt(rgba[0]) * 299 + parseInt(rgba[1]) * 587 + parseInt(rgba[2]) * 114) / 1000;
-                return brightness < 128;
-            }
-            
-            var banner = document.querySelector('.logo-banner-section');
-            if (isDark(document.body) || isDark(document.documentElement) || isDark(banner)) {
-                document.body.classList.add('dark-mode-forced');
-            } else {
-                document.body.classList.remove('dark-mode-forced');
-            }
-        }
-        window.addEventListener('load', function() {
-            checkForcedDarkMode();
-            setInterval(checkForcedDarkMode, 1000); // Check periodically for toggles
-        });
-    </script>
 </body>
 </html>
