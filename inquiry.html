@@ -507,27 +507,38 @@
                     e.preventDefault();
                     
                     const formData = new FormData(this);
-                    const name = formData.get('Name') || 'N/A';
-                    const company = formData.get('Company') || 'N/A';
-                    const country = formData.get('Country') || 'N/A';
+                    const toTitleCase = (str) => {
+                        if (!str || str === 'N/A') return str;
+                        return str.split(' ').map(w => w ? w.charAt(0).toUpperCase() + w.slice(1).toLowerCase() : '').join(' ');
+                    };
+                    
+                    const name = toTitleCase(formData.get('Name')) || 'N/A';
+                    const company = toTitleCase(formData.get('Company')) || 'N/A';
+                    const country = toTitleCase(formData.get('Country')) || 'N/A';
                     const email = formData.get('Email') || 'N/A';
                     const countryCode = formData.get('Country Code') || '';
                     const mobile = formData.get('Mobile') || 'N/A';
-                    const orgSize = formData.get('Organization Size') || 'N/A';
-                    const industry = formData.get('Industry') || 'N/A';
+                    const orgSize = toTitleCase(formData.get('Organization Size')) || 'N/A';
+                    const industry = toTitleCase(formData.get('Industry')) || 'N/A';
                     
                     const selectedCategories = Array.from(document.querySelectorAll('.cat-checkbox:checked'))
                                                 .map(cb => cb.value).join(', ') || 'None selected';
 
                     const subject = `New Inquiry from ${name} (${company})`;
-                    let bodyRaw = `Name: ${name}\n`;
-                    bodyRaw += `Company: ${company}\n`;
-                    bodyRaw += `Country: ${country}\n`;
-                    bodyRaw += `Email: ${email}\n`;
-                    bodyRaw += `Mobile: ${countryCode} ${mobile}\n`;
-                    bodyRaw += `Organization Size: ${orgSize}\n`;
-                    bodyRaw += `Industry: ${industry}\n`;
-                    bodyRaw += `Services Pathways: ${selectedCategories}\n`;
+                    let bodyRaw = `Dear Mr. Essam,\n\n`;
+                    bodyRaw += `My name is ${name} and I am reaching out from ${company} in ${country}.\n\n`;
+                    
+                    if (selectedCategories !== 'None selected') {
+                        bodyRaw += `I am interested in exploring your executive services, specifically:\n- ${selectedCategories.split(', ').join('\n- ')}\n\n`;
+                    }
+                    
+                    bodyRaw += `Here is some context about our organization:\n`;
+                    bodyRaw += `- Industry: ${industry}\n`;
+                    bodyRaw += `- Organization Size: ${orgSize}\n\n`;
+                    
+                    bodyRaw += `You can reach me via email at ${email} or by phone at ${countryCode} ${mobile}.\n\n`;
+                    bodyRaw += `I look forward to discussing how we can solve complexity and drive performance together.\n\n`;
+                    bodyRaw += `Best regards,\n${name}`;
 
                     // Open default email app
                     window.location.href = `mailto:essamslama@hotmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyRaw)}`;
