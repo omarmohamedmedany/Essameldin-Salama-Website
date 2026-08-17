@@ -2035,9 +2035,9 @@ body.dark-mode-forced .client-logo {
     padding: 0;
 }
 
-.logo-greyscale-contrast {
-    mix-blend-mode: normal !important;
-    filter: grayscale(1) contrast(5) brightness(2) !important;
+.logo-marquee-track .logo-greyscale-contrast {
+    mix-blend-mode: normal;
+    filter: grayscale(1) contrast(1.2) brightness(1.2);
 }
 
 /* Typography / Badges */
@@ -2204,4 +2204,28 @@ body.dark-mode-forced .client-logo {
 .inquiry-form .form-group textarea:focus::placeholder {
     opacity: 1 !important;
     color: #94a3b8 !important;
+}
+
+/* Accessibility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }

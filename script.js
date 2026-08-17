@@ -198,12 +198,15 @@ document.addEventListener("DOMContentLoaded", () => {
         let charIndex = 0;
 
         function type() {
+            if (charIndex === 0 && typeTarget.textContent === '\u200B') {
+                typeTarget.textContent = '';
+            }
             if (charIndex < textArray[textIndex].length) {
                 typeTarget.textContent += textArray[textIndex].charAt(charIndex);
                 charIndex++;
-                setTimeout(type, 50); // Sped up typing (was 80)
+                setTimeout(type, 50); // Sped up typing
             } else {
-                setTimeout(erase, 1500); // Shorter pause before erasing (was 2500)
+                setTimeout(erase, 1500); // Shorter pause before erasing
             }
         }
 
@@ -211,8 +214,9 @@ document.addEventListener("DOMContentLoaded", () => {
             if (charIndex > 0) {
                 typeTarget.textContent = textArray[textIndex].substring(0, charIndex - 1);
                 charIndex--;
-                setTimeout(erase, 25); // Sped up erasing (was 40)
+                setTimeout(erase, 25); // Sped up erasing
             } else {
+                typeTarget.textContent = '\u200B'; // Prevent height collapse when empty
                 textIndex++;
                 if (textIndex >= textArray.length) textIndex = 0;
                 setTimeout(type, 300); // Faster switch to next word
