@@ -1,0 +1,26 @@
+{
+  "name": "essameldin-salama-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omarmohamedmedany/Essameldin-Salama-Website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/omarmohamedmedany/Essameldin-Salama-Website/issues"
+  },
+  "homepage": "https://github.com/omarmohamedmedany/Essameldin-Salama-Website#readme",
+  "devDependencies": {
+    "vite": "^8.2.1",
+    "vite-plugin-handlebars": "^2.0.3"
+  }
+}
