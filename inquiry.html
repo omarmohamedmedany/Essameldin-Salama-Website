@@ -64,7 +64,14 @@
                 <h2>Tell us what you need</h2>
                 <p class="form-subtext">Complete every field so we can provide actionable executive advice.</p>
                 
-                <form id="inquiryForm" class="inquiry-form">
+                <form action="https://api.web3forms.com/submit" method="POST" id="inquiryForm" class="inquiry-form">
+                    
+                    <!-- Web3Forms Access Key (Replace with your actual key) -->
+                    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                    <!-- Subject for the email -->
+                    <input type="hidden" name="subject" value="New Inquiry via Essameldin Website">
+                    <!-- Redirect to homepage after submission -->
+                    <input type="hidden" name="redirect" value="https://web3forms.com/success">
 
                     <div class="form-grid">
                         <div class="form-group">
